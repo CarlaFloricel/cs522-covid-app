@@ -1,22 +1,15 @@
-
+import React from 'react';
 import './App.css';
+import HomePage from './components/homepage/homepage.component';
+import Activities from './components/activities/activities.component';
+import Vaccines from './components/vaccines/vaccines.component';
+import Faq from './components/faq/faq.component';
+import Map from './components/map/map.component';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Faq/>
     </div>
   );
 }
