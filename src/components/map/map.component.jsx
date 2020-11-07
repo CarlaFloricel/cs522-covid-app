@@ -18,7 +18,7 @@ class Map extends React.Component {
         return (
         <div>
             <h1>MAP</h1>
-            <div ref="chart"></div>)
+            <div ref="chart"></div>
         </div>
         )
         

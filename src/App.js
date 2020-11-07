@@ -7,11 +7,13 @@ import Activities from './components/activities/activities.component';
 import Vaccines from './components/vaccines/vaccines.component';
 import Faq from './components/faq/faq.component';
 import Map from './components/map/map.component';
+import Header from './components/header/header.component';
 
 
 function App() {
   return (
     <div className="App">
+       <Header/>
       <Switch>
         <Route exact path='/' component={HomePage}></Route>
         <Route exact path='/map' component={Map}></Route>
