@@ -9,6 +9,8 @@ import Faq from './components/faq/faq.component';
 import Map from './components/map/map.component';
 import Header from './components/header/header.component';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

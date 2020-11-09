@@ -1,6 +1,11 @@
 import React from 'react';
 import './map.styles.css';
-import D3DummyChart from './map.d3.component';
+import CovidMap from './map.d3.component';
+
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class Map extends React.Component {
     constructor(){
@@ -11,15 +16,40 @@ class Map extends React.Component {
     }
 
     componentDidMount(){
-        new D3DummyChart(this.refs.chart)
+        new CovidMap(this.refs.chart)
     }
 
     render(){
         return (
-        <div>
-            <h1>MAP</h1>
-            <div ref="chart"></div>
-        </div>
+        <Container fluid={'lg'}>
+            <Row md={12}>
+                <Col md={3}>
+                    <div id='mapControls'>
+                        <h4>Controls</h4>
+                    </div>
+                </Col>
+                <Col md={9}>
+                    <Row md={12}>
+                        <Col md={9}>
+            `               <div id='map'>
+                                <h4>Select A County</h4>
+                                <div ref="chart" ></div>
+                            </div>
+                        </Col>
+                        <Col md={3}>
+                            <div id='itinerary'>
+                                <h4>Itinerary</h4>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row md={12}>
+                        <div id='mapCompare'>
+                            <h4>Compare Cities</h4>
+                        </div>
+                    </Row>
+                </Col>
+            </Row>
+        </Container>
         )
         
     }

@@ -1,0 +1,25 @@
+#map{
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: -24px;
+    background: gray;
+    width: 100%;
+}
+
+#mapControls{
+    height: 80vh;
+    width: 100%;
+    background:red;
+}
+
+#mapCompare{
+    height: 20vh;
+    width: 100%;
+    background: orange;
+}
+
+#itinerary{
+    height: 60vh;
+    width: 100%;
+    background: yellow;
+}
