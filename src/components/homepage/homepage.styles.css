@@ -21,7 +21,11 @@ align-items: center;
 justify-content: center;
 border: 1px solid black;
 margin: 0 7.5px 15px;
+background-position: center;
+background-size: cover;
+
 }
+
 
 /* .menu-item:first-child {
     margin-right: 7.5px;
@@ -31,24 +35,19 @@ margin: 0 7.5px 15px;
     margin-left: 7.5px;
 } */
 
-.menu-item .content {
+.content {
     height: 90px;
     padding: 0 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
 }
-.menu-item .content .title {
+.content .title {
 font-weight: bold;
 margin-bottom: 6px;
 font-size: 22px;
 color: #4a4a4a;
 }
 
-.menu-item .content .subtitle {
-font-weight: lighter;
-font-size: 16px;
-}
 

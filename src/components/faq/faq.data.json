@@ -1,0 +1,238 @@
+
+    [
+        {
+            "type":"Basics",
+            "question": "What is a novel coronavirus?",
+            "reply": "A novel coronavirus is a new coronavirus that has not been previously identified. The virus causing coronavirus disease 2019 (COVID-19), is not the same as the coronaviruses that commonly circulate among humans and cause mild illness, like the common cold.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Basics",
+            "question": "Why is the disease being called coronavirus disease 2019, COVID-19?",
+            "reply": "On February 11, 2020 the World Health Organization announced an official name for the disease that is causing the 2019 novel coronavirus outbreak, first identified in Wuhan China. The new name of this disease is coronavirus disease 2019, abbreviated as COVID-19. In COVID-19, ‘CO’ stands for ‘corona,’ ‘VI’ for ‘virus,’ and ‘D’ for disease. Formerly, this disease was referred to as “2019 novel coronavirus” or “2019-nCoV”.There are many types of human coronaviruses including some that commonly cause mild upper-respiratory tract illnesses. COVID-19 is a new disease, caused by a novel (or new) coronavirus that has not previously been seen in humans.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {   
+            "type":"Spread",
+            "question": "How does the virus spread?",
+            "reply": "The virus that causes COVID-19 most commonly spreads between people who are in close contact with one another (within about 6 feet, or 2 arm lengths). It spreads through respiratory droplets or small particles, such as those in aerosols, produced when an infected person coughs, sneezes, sings, talks, or breathes. These particles can be inhaled into the nose, mouth, airways, and lungs and cause infection. This is thought to be the main way the virus spreads. Droplets can also land on surfaces and objects and be transferred by touch. A person may get COVID-19 by touching the surface or object that has the virus on it and then touching their own mouth, nose, or eyes. Spread from touching surfaces is not thought to be the main way the virus spreads. It is possible that COVID-19 may spread through the droplets and airborne particles that are formed when a person who has COVID-19 coughs, sneezes, sings, talks, or breathes. There is growing evidence that droplets and airborne particles can remain suspended in the air and be breathed in by others, and travel distances beyond 6 feet (for example, during choir practice, in restaurants, or in fitness classes). In general, indoor environments without good ventilation increase this risk.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Spread",
+            "question": "Will warm weather stop the outbreak of COVID-19?",
+            "reply": "It is not yet known whether weather and temperature affect the spread of COVID-19. Some other viruses, like those that cause the common cold and flu, spread more during cold weather months but that does not mean it is impossible to become sick with these viruses during other months.  There is much more to learn about the transmissibility, severity, and other features associated with COVID-19 and investigations are ongoing.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Spread",
+            "question": "What is community spread?",
+            "reply": "Community spread means people have been infected with the virus in an area, including some who are not sure how or where they became infected. Each health department determines community spread differently based on local conditions. For information on community spread in your area, please visit your health department’s website.​",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Spread",
+            "question": "Can mosquitoes or ticks spread the virus that causes COVID-19?",
+            "reply": "At this time, CDC has no data to suggest that this new coronavirus or other similar coronaviruses are spread by mosquitoes or ticks. The main way that COVID-19 spreads is from person to person. See How Coronavirus Spreads for more information.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+    
+        {
+            "type":"Prevention",
+            "question": "How can I protect myself?",
+            "reply": "Visit the How to Protect Yourself & Others page to learn about how to protect yourself from respiratory illnesses, like COVID-19.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "Does CDC recommend the use of masks to prevent COVID-19?",
+            "reply": "Wear masks in public settings when around people not living in your household and particularly where other social distancing measures are difficult to maintain, such as grocery stores, pharmacies, and gas stations. Masks may slow the spread of the virus and help people who may have the virus and do not know it from transmitting it to others. COVID-19 can be spread by people who do not have symptoms and do not know that they are infected. That’s why it’s important for everyone to practice social distancing (staying at least 6 feet away from other people) and wear masks in public settings. Masks provide an extra layer to help prevent the respiratory droplets from traveling in the air and onto other people. The masks recommended are not surgical masks or N-95 respirators. Those are critical supplies that must continue to be reserved for healthcare workers and other medical first responders, as recommended by current CDC guidance.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-to-wear-cloth-face-coverings.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "Is it safe to get care for my other medical conditions during this time?",
+            "reply": "It is important to continue taking care of your health and wellness. Continue your medications, and do not change your treatment plan without talking to your healthcare provider. Continue to manage your disease the way your healthcare provider has told you. Have at least a 2-week supply of all prescription and non-prescription medications. Talk to your healthcare provider about whether your vaccinations are up-to-date. Call your healthcare provider if you have any concerns about your medical conditions, or if you get sick. to find out about different ways you can connect with your healthcare provider for chronic disease management or other conditions. Do not delay getting emergency care for your health problems or any health condition that requires immediate attention. If you need emergency help, call 911. Emergency departments have infection prevention plans to protect you from getting COVID-19 if you need care for your medical condition. Continue to practice everyday prevention. Wash your hands often, avoid close contact, wear a mask, cover coughs and sneezes, and clean and disinfect frequently touched surfaces often.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/people-with-medical-conditions.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fneed-extra-precautions%2Fgroups-at-higher-risk.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "Am I at risk for COVID-19 from mail, packages, or products?",
+            "reply": "There is still a lot that is unknown about COVID-19 and how it spreads. Coronaviruses are thought to be spread most often by respiratory droplets. Although the virus can survive for a short period on some surfaces, it is unlikely to be spread from domestic or international mail, products or packaging. However, it may be possible that people can get COVID-19 by touching a surface or object that has the virus on it and then touching their own mouth, nose, or possibly their eyes, but this is not thought to be the main way the virus spreads.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "Is it okay for me to donate blood?",
+            "reply": "In healthcare settings across the United States, donated blood is a lifesaving, essential part of caring for patients. The need for donated blood is constant, and blood centers are open and in urgent need of donations. CDC encourages people who are well to continue to donate blood if they are able, even if they are practicing social distancing because of COVID-19. CDC is supporting blood centers by providing recommendations that will keep donors and staff safe. Examples of these recommendations include spacing donor chairs 6 feet apart, thoroughly adhering to environmental cleaning practices, and encouraging donors to make donation appointments ahead of time.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "Should contact lenses wearers take special precautions to prevent COVID-19?",
+            "reply": "Currently there is no evidence to suggest contact lens wearers are more at risk for acquiring COVID-19 than eyeglass wearers. Contact lens wearers should continue to practice safe contact lens wear and care hygiene habits to help prevent against transmission of any contact lens-related infections, such as always washing hands with soap and water before handling lenses. People who are healthy can continue to wear and care for their contact lenses as prescribed by their eye care professional.",
+            "link": "https://www.cdc.gov/contactlenses/index.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "Is contact lens disinfecting solution effective against COVID-19?",
+            "reply": "Hydrogen peroxide-based systems for cleaning, disinfecting, and storing contact lenses should be effective against the virus that causes COVID-19. For other disinfection methods, such as multipurpose solution and ultrasonic cleaners, there is currently not enough scientific evidence to determine efficacy against the virus. Always use solution to disinfect your contact lenses and case to kill germs that may be present. Handle your lenses over a surface that has been cleaned and disinfected.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "Should I use soap and water or hand sanitizer to protect against COVID-19?",
+            "reply": "Handwashing is one of the best ways to protect yourself and your family from getting sick. Wash your hands often with soap and water for at least 20 seconds, especially after blowing your nose, coughing, or sneezing; going to the bathroom; and before eating or preparing food. If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Prevention",
+            "question": "What cleaning products should I use to protect against COVID-19?",
+            "reply": "Clean and disinfect frequently touched surfaces such as tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets, and sinks.  If surfaces are dirty, clean them using detergent or soap and water prior to disinfection. To disinfect, most common EPA-registered household disinfectants will work. See CDC’s recommendations for household cleaning and disinfection.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Preparing for an Outbreak",
+            "question": "How can I prepare for an outbreak in my area?",
+            "reply": "Create a household plan of action to help protect your health and the health of those you care about in the event of an outbreak of COVID-19 in your community:  Talk with the people who need to be included in your plan, and discuss what to do if a COVID-19 outbreak occurs in your community. Plan ways to care for those who might be at greater risk for serious complications. Make sure they have access to 2 weeks of medications and supplies in case you need to stay home for prolonged periods of time. Get to know your neighbors and find out if your neighborhood has a website or social media page to stay connected. Create a list of local organizations that you and your household can contact in the event you need access to information, healthcare services, support, and resources. Create an emergency contact list of family, friends, neighbors, carpool drivers, health care providers, teachers, employers, the local public health department, and other community resources.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Preparing for an Outbreak",
+            "question": "How can I prepare for COVID-19 at work?",
+            "reply": "Plan for potential changes at your workplace. Talk to your employer about their emergency operations plan, including sick-leave policies and telework options.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/community/guidance-business-response.html"
+        },
+        {
+            "type":"Preparing for an Outbreak",
+            "question": "Should I make my own hand sanitizer if I can't find in the stores?",
+            "reply": "CDC does not encourage the production and use of homemade hand sanitizer products because of concerns over the correct use of the ingredientsexternal icon and the need to work under sterile conditions to make the product. Local industries that are looking into producing hand sanitizer to fill in for commercial shortages can refer to the World Health Organization guidance.pdf iconexternal icon Organizations should revert to the use of commercially produced, FDA-approved product once such supplies again become available. To be effective against killing some types of germs, hand sanitizers need to have a strength of at least 60% alcohol and be used when hands are not visibly dirty or greasy. Do not rely on “Do It Yourself” or “DIY” recipes based solely on essential oils or formulated without correct compounding practices. Do not use hand sanitizer to disinfect frequently touched surfaces and objects. See CDC’s information for cleaning and sanitizing your home.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Symptoms & Emergency Warning Signs",
+            "question": "What are the symptoms and complications that COVID-19 can cause?",
+            "reply": "People with COVID-19 have reported a wide range of symptoms – from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. If you have fever, cough, or other symptoms, you might have COVID-19.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Symptoms & Emergency Warning Signs",
+            "question": "When should I seek emergency care if I have COVID-19?",
+            "reply": "Look for emergency warning signs* for COVID-19. If someone is showing any of these signs, seek emergency medical care immediately: Trouble breathing, Persistent pain or pressure in the chest, New confusion, Inability to wake or stay awake, Bluish lips or face. *This list is not all possible symptoms. Please call your medical provider for any other symptoms that are severe or concerning to you.  Call 911 or call ahead to your local emergency facility: Notify the operator that you are seeking care for someone who has or may have COVID-19.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Symptoms & Emergency Warning Signs",
+            "question": "Is it possible to have the flu and COVID-19 at the same time?",
+            "reply": "Yes. It is possible to test positive for flu (as well as other respiratory infections) and COVID-19 at the same time.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Testing",
+            "question": "Should I be tested for a current infection?",
+            "reply": "Maybe; not everyone needs to be tested for COVID-19. If you have symptoms of COVID-19 and want to get tested, call your healthcare provider first. Most people will have mild illness and can recover at home without medical care and may not need to be tested. CDC has guidance for who should be tested, but decisions about testing are made by state and local health departments and healthcare providers. You can also visit your state or local health department’s website to look for the latest local information on testing.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Testing",
+            "question": "How can I get tested for a curent infection (viral test) and what does my test mean?",
+            "reply": "Decisions about testing are made by state and localexternal icon health departments or healthcare providers. If you have symptoms of COVID-19 and are not tested, it is important to stay home. What to do if you are sick. COVID-19 testing differs by location. If you have symptoms of COVID-19 and want to get tested, call your healthcare provider first. You can also visit your state or localexternal icon health department’s website to look for the latest local information on testing. The U.S. Food and Drug Administration (FDA) has authorized viral tests that let you collect either a nasal swabexternal icon or a saliva sampleexternal icon at home. However, you will still need to send your sample to a laboratory for analysis. If you test positive for COVID-19, know what protective steps to take if you are sick or caring for someone. If you test negative for COVID-19, you probably were not infected at the time your sample was collected. However, that does not mean you will not get sick. The test result only means that you did not have COVID-19 at the time of testing. You might test negative if the sample was collected early in your infection and test positive later during your illness. You could also be exposed to COVID-19 after the test and get infected then. This means you could still spread the virus. If you develop symptoms later, you might need another test to determine if you are infected with the virus that causes COVID-19.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/testing/diagnostic-testing.html"
+        },
+        {
+            "type":"Testing",
+            "question": "How can I get tested for a past infection (antibody test) and what does my test mean?",
+            "reply": "Antibody tests for COVID-19 are available through healthcare providers and laboratories. Check with your healthcare provider to see if they offer antibody tests and whether you should get one. A positive test result shows you might have antibodies from an infection with the virus that causes COVID-19. However, there is a chance a positive result means that you have antibodies from an infection with a virus from the same family of viruses (called coronaviruses), such as the one that causes the common cold. Having antibodies to the virus that causes COVID-19 might provide some protection from getting infected with the virus again. If it does, we do not know how much protection the antibodies might provide or how long this protection might last. Confirmed and suspected cases of reinfection have been reported, but remain rare. You should continue to protect yourself and others since you could get infected with the virus again. If you test negative, you might not have ever had COVID-19. Talk with your healthcare provider about your test result and the type of test you took to understand what your result means. Regardless of whether you test positive or negative, the results do not confirm whether or not you are able to spread the virus that causes COVID-19. Until we know more, continue to take steps to protect yourself and others.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/testing/serology-overview.html"
+        },
+        {
+            "type":"Testing",
+            "question": "Can someone test negative and later test positive on a viral test for COVID-19?",
+            "reply": "Yes, it is possible. You may test negative if the sample was collected early in your infection and test positive later during this illness. You could also be exposed to COVID-19 after the test and get infected then. Even if you test negative, you still should take steps to protect yourself and others. See Testing for Current Infection for more information.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Children",
+            "question": "What is the risk of my child becoming sick of COVID-19?",
+            "reply": "Children can be infected with the virus that causes COVID-19 and can get sick with COVID-19. Most children with COVID-19 have mild symptoms or they may have no symptoms at all (“asymptomatic”). Fewer children have been sick with COVID-19 compared to adults. However, children with certain underlying medical conditions and infants (less than 1 year old) might be at increased risk for severe illness from COVID-19. Some children have developed a rare but serious disease that is linked to COVID-19 called multisystem inflammatory syndrome (MIS-C).",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Children",    
+            "question": "Should children wear masks?",
+            "reply": "In general, children 2 years and older should wear a mask. However, CDC recognizes that wearing masks may not be possible in every situation or for some people. Appropriate and consistent use of masks may be challenging for some children, such as children with certain disabilities, including cognitive, intellectual, developmental, sensory and behavioral disorders. Learn more about what you should do if your child or you cannot wear masks in certain situations.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Children",
+            "question": "What is multisystem inflammatory syndrome in children (MIS-C)?",
+            "reply": "Multisystem inflammatory syndrome in children (MIS-C) is a serious condition associated with COVID-19 where different body parts can become inflamed, including the heart, lungs, kidneys, brain, skin, eyes, or gastrointestinal organs. For information, see MIS-C.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Children",
+            "question": "Can my child hang out with their friends during the pandemic?",
+            "reply": "The more people your child interacts with, and the longer that interaction, the higher the risk of COVID-19 spread. While your child may spend time with other people when they return to childcare or school settings, reducing the number of people your child interacts with outside people within your household, childcare facility or school can reduce the risk of getting and spreading the virus that causes COVID-19. CDC recommends children 2 years of age and older wear a mask in public settings or when around people who do not live in their household, especially when it is difficult to stay at least 6 feet from others. However, masks should not be a substitute for other preventive measures such as frequent hand washing and staying at least 6 feet away from others.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Children",
+            "question": "Can mu child spend time with older adults and people with chronic medical conditions?",
+            "reply": "Older adults and people who have certain underlying medical conditions are at increased risk for getting severely ill from COVID-19. If you live with people at increased risk for severe illness from COVID-19, consider separating your child from them if your child has frequent interactions with those outside the household (like at schools or other settings). Consider postponing visits or trips to see grandparents, older family members, or family members with underlying medical conditions while there are high levels of transmission (or high number of COVID-19 cases) in your community. If your child does visit someone who is older or has an underlying medical condition that puts that them at risk of severe illness, your child should stay at least 6 feet away from that person. If your child is 2 years or older, he or she should also wear a mask. Take steps to help protect your child from COVID-19 in order to reduce the risk of your child spreading the virus that causes COVID-19 to others especially people at increased risk of severe illness.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Children",
+            "question": "My child has an underlying medical condition. What additional steps should my family take?",
+            "reply": "People of any age who have certain underlying medical conditions might be at increased risk for severe illness from COVID-19. In addition to following the recommendations to prevent getting sick, families can take steps recommended for children with underlying conditions.  Consider identifying potential alternative caregivers, in case you or other regular caregivers become sick and are unable to care for your child. If possible, these alternative caregivers should not be at increased risk for severe illness from COVID-19 For more information, see Sick Parents and Caregivers. Make sure these caregivers take extra precautions if your child has a disability.  If your child receives any support care services in the home, such as services from personal care attendants, direct support professionals, or therapists, make plans for what you will do if your child’s direct care providers or anyone in your family gets sick. You can review CDC’s recommendations for Direct Service Providers.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"People at higher risk for severe illness",
+            "question": "Who is at increased risk for developing severe ilness from COVID-19?",
+            "reply": "People at increased risk include: 1) Older adults; 2) People of all ages with certain underlying medical conditions. Pregnant people might also be at increased risk of severe illness from COVID-19. Long-standing systemic health and social inequities have put many people from racial and ethnic minority groups at increased risk of getting sick and dying from COVID-19. In addition to those at increased risk, there are certain groups of people who require extra precautions during the pandemic.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"People at higher risk for severe illness",
+            "question": "Are there any medications I should avoid taking if I have COVID-19?",
+            "reply": "Currently, there is no evidence to suggest that taking any specific medications, like blood pressure medication or ibuprofen, leads to more severe illness from COVID-19. Continue to take your medications and to follow your treatment plan as prescribed by your healthcare provider. Any changes to your medications should only be made after talking with your healthcare provider. Contact your healthcare provider if you have questions or concerns.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"People at higher risk for severe illness",
+            "question": "Are people with diabities at higher risk?",
+            "reply": "Adults with disabilities are more likely to have an underlying medical condition that may put them at increased risk of severe illness from COVID-19 including, but not limited to, heart disease, stroke, diabetes, chronic kidney disease, cancer, high blood pressure, and obesity. In addition, having a disability may make it harder to practice social distancing, wear a mask, and practice hand hygiene.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Contact tracing",
+            "question": "What is contact tracing?",
+            "reply": "Contact tracing has been used for decades by state and local health departments to slow or stop the spread of infectious diseases. Contact tracing slows the spread of COVID-19 by: Letting people know they may have been exposed to COVID-19 and should monitor their health for signs and symptoms of COVID-19; Helping people who may have been exposed to COVID-19 get tested; Asking people to self-isolate if they have COVID-19 or self-quarantine if they are a close contact of someone with COVID-19. During contact tracing, the health department staff will not ask you for: Money, Social Security number, Bank account information, Salary information, Credit card numbers",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Contact tracing",
+            "question": "What will happen with my personal information during contact tracing?",
+            "reply": "Discussions with health department staff are confidential. This means that your personal and medical information will be kept private and only shared with those who may need to know, like your health care provider. If you have been diagnosed with COVID-19, your name will not be shared with those you came in contact with. The health department will only notify people you were in close contact with that they might have been exposed to COVID-19. Each state and jurisdiction use their own method for collecting and protecting health information. To learn more, contact your state or local health department.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Contact tracing",
+            "question": "Who is considered a close contact to someone with COVID-19?",
+            "reply": "For COVID-19, a close contact is anyone who was within 6 feet of an infected person for a total of 15 minutes or more. An infected person can spread COVID-19 starting 48 hours (or 2 days) before the person has any symptoms or tests positive for COVID-19.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Contact tracing",
+            "question": "Am I considered a close contact if I was wearing a mask?",
+            "reply": "Yes, you are still considered a close contact even if you were wearing a mask while you were around someone with COVID-19. Masks are meant to protect other people in case you are infected, and not to protect you from becoming infected.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        },
+        {
+            "type":"Contact tracing",
+            "question": "If I am a close contact, will I be tested for COVID-19?",
+            "reply": "If you have been in close contact with someone who has COVID-19, you should be tested, even if you do not have symptoms of COVID-19. The health department may be able to provide resources for testing in your area. While you are waiting for your COVID-19 test result, stay home away from others (self-quarantine) and monitor your health for symptoms of COVID-19 to protect your friends, family, and others from possibly getting COVID-19. If your test is positive, you should continue to stay home and self-isolate away from others and monitor your health. If you have symptoms of COVID-19 and they worsen or become severe, you should seek emergency medical care. Severe symptoms include trouble breathing, persistent pain or pressure in the chest, confusion, inability to wake or stay awake, or bluish lips or face. Someone from the health department may call you to Check on your health, Discuss who you have been around, and ask where you have spent time while you may have been able to spread COVID-19 to others. If your test is negative and you don’t have symptoms, you should continue to stay home and self-quarantine away from others for 14 days after your last exposure to COVID-19 and follow all recommendations from the health department. This is important because symptoms can appear up to 14 days after you’ve been exposed and are infected. A negative result before the end of your quarantine period does not rule out possible infection. Additionally, you do not need a repeat test unless you develop symptoms, or if you require a test to return to work. If your test is negative and you have symptoms, you should continue to self-quarantine away from others for 14 days after your last exposure to COVID-19 and follow all recommendations from the health department. Additional medical consultation and a second test may be needed if your symptoms do not improve.",
+            "link": "https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
+        }
+]

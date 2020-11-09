@@ -1,5 +1,6 @@
 import React from 'react';
 import './activities.styles.css';
+import image from './activities.JPG';
 
 
 class Activities extends React.Component {
@@ -14,7 +15,7 @@ class Activities extends React.Component {
     render(){
         return(
             <div>
-                <h1>Activities</h1>
+                <img src={image} alt="Logo" />;
             </div>
         )
     }

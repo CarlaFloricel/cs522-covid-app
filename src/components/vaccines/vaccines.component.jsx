@@ -18,12 +18,11 @@ class Vaccines extends React.Component {
         return (
             <div>
                 <h1>VACCINES</h1>
-                <div ref="chart"></div>)
+                <div ref="chart"></div>
             </div>
             )
             
-        
-    }
+        }
 }
 
 export default Vaccines;

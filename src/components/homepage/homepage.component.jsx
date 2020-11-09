@@ -1,5 +1,9 @@
 import React from 'react';
 import './homepage.styles.css';
+import mapImg from './map.jpg';
+import activitiesImg from './activities.jpg';
+import vaccinesImg from './vaccines.png';
+import faqImg from './faq.jpg';
 
 class HomePage extends React.Component {
     constructor(){
@@ -8,27 +12,27 @@ class HomePage extends React.Component {
             menuItems: [
                {
                    title: "Safe Travel",
-                   imageUrl: '',
+                   imageUrl: './activities.JPG',
                    id: 1,
-                   url: '/map'
+                   url: mapImg
                },
                {
                     title: "Vaccines",
-                    imageUrl: '',
+                    imageUrl: './map.jpg',
                     id: 2,
-                    url: '/vaccines'
+                    url: vaccinesImg
                 },
                 {
-                    title: "Daily Activity",
-                    imageUrl: '',
+                    title: "Activities",
+                    imageUrl: './map.jpg',
                     id: 3,
-                    url: '/activities'
+                    url: activitiesImg
                 },
                 {
                     title: "FAQ",
-                    imageUrl: '',
+                    imageUrl: './map.jpg',
                     id: 4,
-                    url: '/faq'
+                    url: faqImg
                 },
             ]
         }
@@ -41,9 +45,9 @@ class HomePage extends React.Component {
             <div className='directory-menu'>
                 {
                 this.state.menuItems.map( item => (
-                    <div className='menu-item' key={item.id}>
+                    <div className='menu-item' key={item.id} style={{backgroundImage: `url(${item.url})`}}>
                         <div className='content'>
-                            <button key={item.id} type="button" className="btn btn-info btn-lg" 
+                            <button key={item.id} type="button" className="btn btn-info btn-lg"
                                 onClick={() => this.props.history.push(`${item.url}`)}>
                             {item.title}
                             </button>
