@@ -12,27 +12,27 @@ class HomePage extends React.Component {
             menuItems: [
                {
                    title: "Safe Travel",
-                   imageUrl: './activities.JPG',
+                   imageUrl: mapImg,
                    id: 1,
-                   url: mapImg
+                   url: '/map'
                },
                {
                     title: "Vaccines",
-                    imageUrl: './map.jpg',
+                    imageUrl: vaccinesImg,
                     id: 2,
-                    url: vaccinesImg
+                    url: '/vaccines'
                 },
                 {
                     title: "Activities",
-                    imageUrl: './map.jpg',
+                    imageUrl: activitiesImg,
                     id: 3,
-                    url: activitiesImg
+                    url: '/activities'
                 },
                 {
                     title: "FAQ",
-                    imageUrl: './map.jpg',
+                    imageUrl: faqImg,
                     id: 4,
-                    url: faqImg
+                    url: '/faq'
                 },
             ]
         }
@@ -45,7 +45,7 @@ class HomePage extends React.Component {
             <div className='directory-menu'>
                 {
                 this.state.menuItems.map( item => (
-                    <div className='menu-item' key={item.id} style={{backgroundImage: `url(${item.url})`}}>
+                    <div className='menu-item' key={item.id} style={{backgroundImage: `url(${item.imageUrl})`}}>
                         <div className='content'>
                             <button key={item.id} type="button" className="btn btn-info btn-lg"
                                 onClick={() => this.props.history.push(`${item.url}`)}>
