@@ -15,23 +15,23 @@ class Faq extends React.Component {
     render(){
         const d = require('./faq.data.json')
 
-        const basics_q = d.filter(q => q.type == "Basics").filter(q => 
+        const basics_q = d.filter(q => q.type === "Basics").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const spread_q = d.filter(q => q.type == "Spread").filter(q => 
+        const spread_q = d.filter(q => q.type === "Spread").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const prevention_q = d.filter(q => q.type == "Prevention").filter(q => 
+        const prevention_q = d.filter(q => q.type === "Prevention").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const preparing_q = d.filter(q => q.type == "Preparing for an Outbreak").filter(q => 
+        const preparing_q = d.filter(q => q.type === "Preparing for an Outbreak").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const symptoms_q = d.filter(q => q.type == "Symptoms & Emergency Warning Signs").filter(q => 
+        const symptoms_q = d.filter(q => q.type === "Symptoms & Emergency Warning Signs").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const testing_q = d.filter(q => q.type == "Testing").filter(q => 
+        const testing_q = d.filter(q => q.type === "Testing").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const children_q = d.filter(q => q.type == "Children").filter(q => 
+        const children_q = d.filter(q => q.type === "Children").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const risk_q = d.filter(q => q.type == "People at higher risk for severe illness").filter(q => 
+        const risk_q = d.filter(q => q.type === "People at higher risk for severe illness").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
-        const contact_q = d.filter(q => q.type == "Contact tracing").filter(q => 
+        const contact_q = d.filter(q => q.type === "Contact tracing").filter(q => 
             q.question.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase()))
 
         const questions_type = [{name: "Basics", items: basics_q}, {name: "Spread", items: spread_q}, 
@@ -48,13 +48,13 @@ class Faq extends React.Component {
                 placeholder='Search'
                 onChange={e => this.setState({searchField: e.target.value})}>
                 </input>
-                {d && questions_type.map(i => (
-                   i.items.length && 
+                {questions_type.map(i => (
+                   i.items.length>0 ?
                     <div className='faq-list'>
                     <h1 className="faq_element">{i.name}</h1>
                     <Question list = {i.items}/>
                     </div>
-                
+                : <div></div>
                 ))}
             </div>
         )
