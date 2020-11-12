@@ -1,25 +1,42 @@
-#map{
+#covidMap{
     height: 60vh;
-    margin: 0 auto;
-    margin-top: -24px;
-    background: gray;
+    width: 100%;
+    border: 2px solid red;
+}
+
+.covidMapBody{
+    height: 100%;
+    width: 100%;
+}
+.covidMapCanvas{
+    height: calc(100% - 2em);
     width: 100%;
 }
 
 #mapControls{
-    height: 80vh;
+    height: 40vh;
     width: 100%;
-    background:red;
+    border: 2px solid red;
 }
 
+#mapFilters{
+    height: 40vh;
+    width: 100%;
+    border: 2px solid red;
+}
 #mapCompare{
     height: 20vh;
     width: 100%;
-    background: orange;
+    border: 2px solid red;
 }
 
 #itinerary{
     height: 60vh;
     width: 100%;
-    background: yellow;
+    border: 2px solid red;
 }
+
+/* circle{
+    stroke: 'black';
+    stroke-width: 1em;
+}  */

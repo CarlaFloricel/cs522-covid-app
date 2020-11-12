@@ -5,7 +5,7 @@ import './header.styles.css';
 
 const Header = () => (
     <div className="headerContainer">
-        <h1>Explore Covid-19</h1>
+        {/* <h1>Explore Covid-19</h1> */}
     <div className='header'>
         <Link to="/" className="logo-container">
         <button type="button" className="btn btn-info btn-lg">
