@@ -21,8 +21,8 @@ export default class CovidMap extends React.Component{
 
     create(node){
         d3.select(node).selectAll('svg').remove();
-        this.height = node.clientHeight*.98;
-        this.width = node.clientWidth*.98;
+        this.height = node.clientHeight*.99;
+        this.width = node.clientWidth*.99;
         this.svg = d3.select(node).append('svg')
             .attr('class','map-svg zoomable')
             .attr('width', this.width)
@@ -31,10 +31,11 @@ export default class CovidMap extends React.Component{
 
         this.g = this.svg.append('g').attr('class', 'map-g')
 
-        this.scale = Math.min(this.width*1.35, this.height*3)
+        this.scale = Math.min(this.width, this.height)
+        this.aspectRatio = this.width/this.height;
 
         this.projection = d3.geoAlbersUsa()
-            .translate([node.clientWidth/2, node.clientHeight/2])
+            .translate([this.width/2, this.height/2])
             .scale(this.scale)
 
         this.path = d3.geoPath().projection(this.projection);
@@ -49,10 +50,8 @@ export default class CovidMap extends React.Component{
         let startCity = this.props.startCity;
         let destinationCity = this.props.destinationCity;
         if(cities != undefined){
-            console.log(startCity, destinationCity)
             let start = cities.filter(x => x.name == startCity)[0]
             let destination = cities.filter(x => x.name == destinationCity)[0]
-            console.log(start, destination)
             if(start != undefined && destination != undefined){
                 let projection = this.projection;
                 let cityPosition = function(d){
@@ -63,16 +62,21 @@ export default class CovidMap extends React.Component{
                 let dy = Math.abs(y1 - y0);
                 let x = Math.min(x0,x1)
                 let y = Math.min(y0,y1)
-                let scale =  Math.min(4, this.width/dx,this.height/dx);
+                let scale =  Math.min(15, 1.3*this.scale/dx, .9*this.scale/dy);
                 let translate = [this.width/2 - scale*(x+dx/2), this.height/2 - scale*(y+dy/2)];
                 this.g.attr('transform', 'translate(' + translate[0] + ',' + translate[1] + ')' + ' scale(' + scale + ')')
             }
         }
+        console.log(this.props.inspectCitys)
     }
 
     drawCountys(){
         if(this.props.data.countys !== undefined){
             this.g.selectAll('path').filter('.county').remove()
+
+            this.props.colorMap.fitValues(this.props.data.countys);
+            let colorScale = this.props.colorMap.getColorScale()
+
             let countys = this.g.selectAll('path')
                 .filter('.county')
 
@@ -80,55 +84,68 @@ export default class CovidMap extends React.Component{
                 .enter().append('path')
                 .attr('class','county')
                 .attr('d', d=> this.path(d.features))
-                .attr('fill','orangered');
+                .attr('fill',colorScale);
             countys.exit().remove()
         }
+    }
+
+    cityOnClicks(d,city){
+        //for some reason i is the data this time?
+        console.log(d,city)
+        console.log(this.props)
+        let cityIdx = this.props.inspectCitys.indexOf(city.name)
+        var newInspectCitys
+        if (cityIdx > -1){
+            newInspectCitys = this.props.inspectCitys.filter(x => x !== city.name)
+        } else{
+            newInspectCitys = [...this.props.inspectCitys]
+            newInspectCitys.push(city.name)
+        }
+        this.props.setInspectCitys(newInspectCitys)
     }
 
     drawCities(){
         if(this.props.data.cities != undefined){
             this.g.selectAll('circle').filter('.city').remove()
-            let cities = this.g.selectAll('path')
-                .filter('.city')
+            
             var projection = this.projection;
             let cityPosition = function(d){
                 return "translate(" + projection([d.lon, d.lat]) + ")"
             }
 
             let props = this.props
-            cities.data(this.props.data.cities)
+            let cities = this.g.selectAll('path')
+                .filter('.city')
+                .data(this.props.data.cities)
                 .enter().append('circle')
-                .attr('class','city')
-                .attr('r', d => {return (d.pop**.35)/40})
+                .attr('class', (d) => {return this.getCityStyle(props,d)})
+                .attr('r', d => {return (d.pop**.40)/120})
+                .on('click', (d,i) => this.cityOnClicks(d,i))
                 .attr("transform", cityPosition)
-                .attr('fill', (d) => {return this.cityColor(props,d)})
-                .attr('stroke','black')
-                .attr('stroke-width', (d) => {return this.getCityStrokeWidth(props,d)})
         }
         this.zoomToBounds()
     }
 
-    getCityStrokeWidth(props, city){
+    getCityStyle(props, city){
         let isIn = function(item,collection){
             return collection.indexOf(item) > -1
         }
-        if( isIn(city.name, props.inspectCitys)){
-            return 2
-        } else{
-            return 1
-        }
-    }
-
-    cityColor(props, city){
-        let isIn = function(item,collection){
-            return collection.indexOf(item) > -1
-        }
-        if (city.name == props.destinationCity || city.name == props.startCity || isIn(city.name, props.itineraryCitys)){
-            return 'black'
+        let filterNames = props.filters.filter(x => x.active).map(x=> x.name);
+        if (city.name == props.destinationCity || city.name == props.startCity){
+            return 'city city-primary'
+        } else if(isIn(city.name, props.itineraryCitys)){
+            return 'city city-itinerary'
         } else if (isIn(city.name, props.inspectCitys)){
-            return 'blue'
-        } else{
-            return "grey" //default color
+            return 'city city-inspect'
+        } else if(isIn('Mask Mandate', filterNames) && !city.maskMandate){
+            return 'city city-hidden'
+        } else if(isIn('Schools Open', filterNames) && !city.schoolsOpen){
+            return 'city city-hidden'
+        } else if (isIn('Indoor Dining', filterNames) && !city.restaurantsOpen){
+            return 'city city-hidden'
+        }
+        else{
+            return "city city-default" //default color
         }
     }
 
@@ -143,6 +160,10 @@ export default class CovidMap extends React.Component{
     componentDidUpdate(prevProps){
         this.drawCountys()
         this.drawCities()
+        //basically reset the inspect citys to none if it's a new 'route'  not very elegant tho
+        if((prevProps.startCity !== this.props.startCity || prevProps.destinationCity !== this.props.destinationCity) && this.props.inspectCitys.length > 0){
+            this.props.setInspectCitys([])
+        }
     }
 
     componentWillUnmount(){
@@ -155,7 +176,7 @@ export default class CovidMap extends React.Component{
 
     render(){
         return <div className='covidMapBody'>
-            <h4>Select A County</h4>
+            <h4>Select A City</h4>
             <div className='covidMapCanvas' ref={this._setRef.bind(this)}/>
         </div>
     }

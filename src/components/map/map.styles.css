@@ -1,7 +1,7 @@
 #covidMap{
-    height: 60vh;
+    height: calc(60vh - 1em);
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .covidMapBody{
@@ -14,26 +14,89 @@
 }
 
 #mapControls{
-    height: 40vh;
+    height: 35vh;
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #mapFilters{
-    height: 40vh;
+    height: 50vh;
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 #mapCompare{
-    height: 20vh;
+    height: 30vh;
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+    /* overflow-y: scroll; */
 }
+.compareList{
+    height: calc(100% - 3em - 1vh);
+    overflow-y:scroll;
+}
+ .compareHeader{
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+ }
+
+ .top-buffer{
+     margin-top: 1vh;
+     margin-bottom: .1vh;
+ }
+
+ .text-left{
+    text-align: left;
+ }
 
 #itinerary{
-    height: 60vh;
+    height: calc(60vh - 1em);
     width: 100%;
-    border: 2px solid red;
+    overflow-y: auto;
+    /* border: 2px solid red; */
+}
+
+.map-g{
+    transition: all .5s ease-in;
+}
+
+.city-list{
+    max-height: 15vh;
+    overflow-y: hidden;
+    height: 100%;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+circle{
+    stroke: black;
+}
+
+.city-default {
+    stroke-width: .5;
+    fill: white;
+    opacity: .65;
+}
+.city-primary{
+    stroke-width: 1;
+    fill: black;
+    opacity: 1;
+}
+.city-inspect{
+    stroke-width: 1;
+    fill: #d95f02;
+    opacity: .9;
+}
+.city-itinerary{
+    stroke-width: 1;
+    fill: #1b9e77;
+    opacity: .9;
+}
+.city-hidden{
+    display: none;
 }
 
 /* circle{
