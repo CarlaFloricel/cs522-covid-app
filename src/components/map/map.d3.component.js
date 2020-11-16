@@ -58,13 +58,14 @@ export default class CovidMap extends React.Component{
                     return projection([d.lon, d.lat])
                 }
                 const [[x0,y0],[x1,y1]] = [cityPosition(start),cityPosition(destination)]
-                let dx = Math.abs(x1 - x0);
+                let dx = Math.abs(x1 - x0)*1.2;//add some buffer for east-coast city names?
                 let dy = Math.abs(y1 - y0);
                 let x = Math.min(x0,x1)
                 let y = Math.min(y0,y1)
                 let scale =  Math.min(15, 1.3*this.scale/dx, .9*this.scale/dy);
                 let translate = [this.width/2 - scale*(x+dx/2), this.height/2 - scale*(y+dy/2)];
                 this.g.attr('transform', 'translate(' + translate[0] + ',' + translate[1] + ')' + ' scale(' + scale + ')')
+                this.g.selectAll('.cityName').attr("font-size", (d) => 250/((scale**.5)*this.scale) + 'em')
             }
         }
         console.log(this.props.inspectCitys)
@@ -106,7 +107,7 @@ export default class CovidMap extends React.Component{
 
     drawCities(){
         if(this.props.data.cities != undefined){
-            this.g.selectAll('circle').filter('.city').remove()
+            this.g.selectAll('g').filter('.cityGroup').remove()
             
             var projection = this.projection;
             let cityPosition = function(d){
@@ -115,37 +116,59 @@ export default class CovidMap extends React.Component{
 
             let props = this.props
             let cities = this.g.selectAll('path')
-                .filter('.city')
+                .filter('.cityGroup')
                 .data(this.props.data.cities)
-                .enter().append('circle')
-                .attr('class', (d) => {return this.getCityStyle(props,d)})
-                .attr('r', d => {return (d.pop**.40)/120})
-                .on('click', (d,i) => this.cityOnClicks(d,i))
+                .enter().append('g')
+                .attr('class', 'cityGroup')
                 .attr("transform", cityPosition)
+
+            let getRadius = d => {return (d.pop**.40)/120}
+
+            cities.append('circle')
+                .attr('class', this.getCityStyle.bind(this))
+                .attr('r', getRadius)
+                .on('click', (d,i) => this.cityOnClicks(d,i))
+
+            cities.append('text')
+                .attr('class', this.getCityNameStyle.bind(this))
+                .attr("dx", (d) => -100/this.scale +'em')
+                .attr("dy", (d) => -getRadius(d) - 100/this.scale)
+                .text(d=>d.name)
+
         }
         this.zoomToBounds()
     }
 
-    getCityStyle(props, city){
+    getCityStyle(city){
+        let classType = this.getCityClassType(this.props, city);
+        return 'city city-' + classType
+    }
+
+    getCityNameStyle(city){
+        let classType = this.getCityClassType(this.props,city);
+        return 'cityName cityName-' + classType
+    }
+
+    getCityClassType(props, city){
         let isIn = function(item,collection){
             return collection.indexOf(item) > -1
         }
         let filterNames = props.filters.filter(x => x.active).map(x=> x.name);
         if (city.name == props.destinationCity || city.name == props.startCity){
-            return 'city city-primary'
+            return 'primary'
         } else if(isIn(city.name, props.itineraryCitys)){
-            return 'city city-itinerary'
+            return 'itinerary'
         } else if (isIn(city.name, props.inspectCitys)){
-            return 'city city-inspect'
+            return 'inspect'
         } else if(isIn('Mask Mandate', filterNames) && !city.maskMandate){
-            return 'city city-hidden'
+            return 'hidden'
         } else if(isIn('Schools Open', filterNames) && !city.schoolsOpen){
-            return 'city city-hidden'
+            return 'hidden'
         } else if (isIn('Indoor Dining', filterNames) && !city.restaurantsOpen){
-            return 'city city-hidden'
+            return 'hidden'
         }
         else{
-            return "city city-default" //default color
+            return "default" //default color
         }
     }
 

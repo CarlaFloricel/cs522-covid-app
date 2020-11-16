@@ -14,6 +14,12 @@
     text-align: start;
 }
 
+.search-bar {
+    width: 35vw;
+    margin:0 5%;
+}
+
+/*styling for carla's original faq stuff*/
 .question-container {
     width: 85vw;
     margin: 0 auto;
@@ -27,7 +33,15 @@
     display:flex;
 }
 
-.search-bar {
-    width: 35vw;
-    margin:0 5%;
+/* the new styling from andrews stuff */
+.questionCard {
+    background: aliceblue!important;
+    font-size: 1.2em;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.replyCard{
+    text-align: left;
+    font-size: 1em;
 }

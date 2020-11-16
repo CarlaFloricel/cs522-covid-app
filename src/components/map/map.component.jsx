@@ -118,7 +118,7 @@ const Filters = ({filters,setFilters}) => {
     )
 }
 
-const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities}) => {
+const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities, setInspectCitys}) => {
     const isIn = function(item,collection){
         return collection.indexOf(item) > -1;
     }
@@ -138,9 +138,18 @@ const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities
             }
         }
 
+        var removeFromInspect = (e) => {
+            var newInspectCitys = inspectCitys.filter(x => x !== city.name)
+            console.log('newInspectCitys', newInspectCitys, city.name)
+            setInspectCitys(newInspectCitys)
+        }
+
         return (
             <Row key={city.geoid} className={'top-buffer'}>
                 <Col>
+                    <Button disabled={inItinerary} onClick={(e) => addToItinerary(e)}> <FaPlus/> </Button>
+                </Col>
+                <Col md={1}>
                     {city.name}
                 </Col>
                 <Col>
@@ -154,8 +163,10 @@ const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities
                     <Button disabled={true} variant={buttonStyle(city.restaurantsOpen)}><FaSchool/></Button>
                     <Button disabled={true} variant={buttonStyle(city.restaurantsOpen)}><FaHamburger/></Button>
                 </Col>
-                <Col>
-                    <Button disabled={inItinerary} onClick={(e) => addToItinerary(e)}> <FaPlus/> </Button>
+                <Col fluid md={1}>
+                    <Button variant={'danger'} size='sm' onClick={removeFromInspect}>
+                            <FaTimes />
+                    </Button>
                 </Col>
             </Row>
     )}
@@ -164,11 +175,12 @@ const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities
             <h4>Compare Cities</h4>
             <Container className={'compareList'} fluid md={4}>
                 <Row>
-                    <Col ><div className='compareHeader'>City</div></Col>
+                    <Col md><div className='compareHeader'>To Itinerary</div></Col>
+                    <Col md={1}><div className='compareHeader'>City</div></Col>
                     <Col ><div className='compareHeader'>Cases</div></Col>
-                    <Col ><div className='compareHeader'>Population</div></Col>
+                    <Col ><div className='compareHeader'>Pop.</div></Col>
                     <Col ><div className='compareHeader'>Mandates</div></Col>
-                    <Col ><div className='compareHeader'>To Itinerary</div></Col>
+                    <Col md={1} ><div className='compareHeader'></div></Col>
                 </Row>
                 {citys.map(cityEntry)}
             </Container>
@@ -249,7 +261,7 @@ export default function Map() {
     return (
     <Container fluid={'lg'}>
         <Row md={12}>
-            <Col md={3}>
+            <Col md={2}>
                 <Row md={12}>
                     <div id='mapControls'>
                         <h5>Find a Route</h5>
@@ -270,7 +282,7 @@ export default function Map() {
                     </div>
                 </Row>
             </Col>
-            <Col md={9}>
+            <Col md={10}>
                 <Row md={12}>
                     <Col md={8}>
                         <div id='covidMap'>
@@ -301,6 +313,7 @@ export default function Map() {
                             data={data}
                             inspectCitys={inspectCitys}
                             setItineraryCities={setItineraryCities}
+                            setInspectCitys={setInspectCitys}
                             itineraryCitys={itineraryCitys}
                         />
                     </div>

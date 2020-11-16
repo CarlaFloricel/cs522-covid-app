@@ -48,13 +48,13 @@ class Faq extends React.Component {
                 placeholder='Search'
                 onChange={e => this.setState({searchField: e.target.value})}>
                 </input>
-                {questions_type.map(i => (
+                {questions_type.map((i,iKey) => (
                    i.items.length>0 ?
-                    <div className='faq-list'>
+                    <div className='faq-list' key={iKey}>
                     <h1 className="faq_element">{i.name}</h1>
                     <Question list = {i.items}/>
                     </div>
-                : <div></div>
+                : <div key={iKey}></div>
                 ))}
             </div>
         )

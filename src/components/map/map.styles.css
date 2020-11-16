@@ -63,7 +63,8 @@
 }
 
 .city-list{
-    max-height: 15vh;
+    max-height: 40vh;
+    width: auto;
     overflow-y: hidden;
     height: 100%;
     display: block;
@@ -75,10 +76,16 @@ circle{
     stroke: black;
 }
 
+.city{
+    cursor: pointer;
+    fill-opacity: .8;
+}
+
 .city-default {
-    stroke-width: .5;
+    stroke-width: .75;
     fill: white;
-    opacity: .65;
+    opacity: .75;
+    fill-opacity: .01;
 }
 .city-primary{
     stroke-width: 1;
@@ -98,7 +105,15 @@ circle{
 .city-hidden{
     display: none;
 }
-
+.cityName{
+    /* font-size: 1em; */
+    transform-origin: left;
+    text-anchor: center;
+    font-weight: bold;
+}
+.cityName-hidden, .cityName-default{
+    display: none;
+}
 /* circle{
     stroke: 'black';
     stroke-width: 1em;
