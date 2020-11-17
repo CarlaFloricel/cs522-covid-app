@@ -5,6 +5,10 @@ import activitiesImg from './activities.jpg';
 import vaccinesImg from './vaccines.png';
 import faqImg from './faq.jpg';
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 class HomePage extends React.Component {
     constructor(){
         super();
@@ -40,21 +44,26 @@ class HomePage extends React.Component {
 
 
     render(){
+        const navButtons = this.state.menuItems.map( item => (
+            <Col md={6}>
+                <div className='menu-item' key={item.id} style={{backgroundImage: `url(${item.imageUrl})`}}>
+                    <div className='content'>
+                        <button key={item.id} type="button" className="btn btn-info btn-lg"
+                            onClick={() => this.props.history.push(`${item.url}`)}>
+                        {item.title}
+                        </button>
+                    </div>
+                </div>
+            </Col>
+        ))
+
         return(  
         <div className='homepage'>
-            <div className='directory-menu'>
-                {
-                this.state.menuItems.map( item => (
-                    <div className='menu-item' key={item.id} style={{backgroundImage: `url(${item.imageUrl})`}}>
-                        <div className='content'>
-                            <button key={item.id} type="button" className="btn btn-info btn-lg"
-                                onClick={() => this.props.history.push(`${item.url}`)}>
-                            {item.title}
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <Container className='directory-menu' fluid>
+                <Row md={12}>
+                    {navButtons}
+                </Row>
+            </Container>
         </div>
         )
     }

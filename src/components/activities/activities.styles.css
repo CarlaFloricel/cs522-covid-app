@@ -1,0 +1,56 @@
+.square{
+    height: 2em;
+    width: 3em;
+    margin-top: -.5em;
+}
+
+.riskSquare{
+    height: 2em;
+    width: auto;
+}
+
+
+.activityLegend{
+    width: auto;
+    text-align: left;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 1em;
+    height: 2em;
+}
+.activityLegend > h6{
+    margin-left: -2em;
+}
+
+.lowRisk{
+    background: #fee0d2;
+    fill: #fee0d2
+}
+
+.nav-item{
+    background: aliceblue;
+    box-shadow: 0px 0px grey;
+    margin: 10px;
+}
+.nav-item.active{
+    /* box-shadow: 0px 0px!important; */
+    box-shadow: 1px -1px blue;
+}
+
+.medRisk, .mediumRisk{
+    background: #fc9272;
+    fill: #fc9272;
+}
+
+.highRisk{
+   background: #de2d26;
+   fill: #de2d26; 
+}
+
+.activityTable{
+    margin-top: 2em;
+}
+.activitys{
+    margin: 0px;
+    padding: 0px;
+}

@@ -51,7 +51,7 @@ class Faq extends React.Component {
                 {questions_type.map((i,iKey) => (
                    i.items.length>0 ?
                     <div className='faq-list' key={iKey}>
-                    <h1 className="faq_element">{i.name}</h1>
+                    <h3 className="faq_element">{i.name}</h3>
                     <Question list = {i.items}/>
                     </div>
                 : <div key={iKey}></div>
