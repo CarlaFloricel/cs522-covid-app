@@ -86,7 +86,7 @@ const Filters = ({filters,setFilters}) => {
         //I should check to make sure this isn't editing in place
         for (let f of filters){
             let newF = Object.assign({}, f)
-            if(newF.name == filterName){
+            if(newF.name === filterName){
                 newF.active = !f.active;
             }
             newFilters.push(newF)
@@ -133,21 +133,21 @@ const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities
             if (!inItinerary){
                 let newItinerary = [...itineraryCitys]
                 newItinerary.push(city.name)
-                console.log(newItinerary)
                 setItineraryCities(newItinerary)
             }
         }
 
         var removeFromInspect = (e) => {
             var newInspectCitys = inspectCitys.filter(x => x !== city.name)
-            console.log('newInspectCitys', newInspectCitys, city.name)
             setInspectCitys(newInspectCitys)
         }
 
         return (
             <Row key={city.geoid} className={'top-buffer'}>
-                <Col>
-                    <Button disabled={inItinerary} onClick={(e) => addToItinerary(e)}> <FaPlus/> </Button>
+                <Col md={1}>
+                    <Button variant={'danger'} size='sm' onClick={removeFromInspect}>
+                            <FaTimes />
+                    </Button>
                 </Col>
                 <Col md={1}>
                     {city.name}
@@ -160,14 +160,13 @@ const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities
                 </Col>
                 <Col>
                     <Button disabled={true} variant={buttonStyle(city.maskMandate)}><FaMask/></Button>
-                    <Button disabled={true} variant={buttonStyle(city.restaurantsOpen)}><FaSchool/></Button>
-                    <Button disabled={true} variant={buttonStyle(city.restaurantsOpen)}><FaHamburger/></Button>
+                    <Button disabled={true} variant={buttonStyle(!city.schoolsOpen)}><FaSchool/></Button>
+                    <Button disabled={true} variant={buttonStyle(!city.restaurantsOpen)}><FaHamburger/></Button>
                 </Col>
-                <Col fluid md={1}>
-                    <Button variant={'danger'} size='sm' onClick={removeFromInspect}>
-                            <FaTimes />
-                    </Button>
+                <Col>
+                    <Button disabled={inItinerary} onClick={(e) => addToItinerary(e)}> <FaPlus/> </Button>
                 </Col>
+    
             </Row>
     )}
     return(
@@ -175,12 +174,12 @@ const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities
             <h4>Compare Cities</h4>
             <Container className={'compareList'} fluid md={4}>
                 <Row>
-                    <Col md><div className='compareHeader'>To Itinerary</div></Col>
+                    <Col md={1}><div className='compareHeader'></div></Col>
                     <Col md={1}><div className='compareHeader'>City</div></Col>
                     <Col ><div className='compareHeader'>Cases</div></Col>
                     <Col ><div className='compareHeader'>Pop.</div></Col>
                     <Col ><div className='compareHeader'>Mandates</div></Col>
-                    <Col md={1} ><div className='compareHeader'></div></Col>
+                    <Col  ><div className='compareHeader'>To Itinerary</div></Col>
                 </Row>
                 {citys.map(cityEntry)}
             </Container>
@@ -194,7 +193,6 @@ const Itinerary = ({startCity, destinationCity, itineraryCitys,setItineraryCitie
     var makeStop = function(name, isStop){
         var circleClass = isStop? 'city-itinerary':'city-primary';
         var removeFromItinerary = function(){
-            console.log('click', name)
             var newItinerary = itineraryCitys.filter(x => x !== name)
             setItineraryCities(newItinerary)
         }
@@ -224,6 +222,9 @@ const Itinerary = ({startCity, destinationCity, itineraryCitys,setItineraryCitie
                 {makeStop(startCity,false)}
                 {cityStops}
                 {makeStop(destinationCity,false)}
+                <Button variant='success'>
+                    Export Trip
+                </Button>
             </Container>
         </div>
     )
@@ -234,8 +235,8 @@ export default function Map() {
 
     let defaultFilters = [
         {name: 'Mask Mandate', active: false, icon: () => {return (<FaMask/>)}},
-        {name: "Schools Open", active: true, icon: () => {return (<FaSchool/>)}},
-        {name: 'Indoor Dining', active: false, icon: () => {return (<FaHamburger/>)}},
+        {name: "Schools Closed", active: true, icon: () => {return (<FaSchool/>)}},
+        {name: 'No Indoor Dining', active: false, icon: () => {return (<FaHamburger/>)}},
     ]
     const [filters, setFilters] = useState(defaultFilters);
     const [startCity, setStartCity] = useState('New York');
@@ -274,7 +275,7 @@ export default function Map() {
                         />
                     </div>
                     <div id='mapFilters'>
-                        <h5>Filters</h5>
+                        <h5>Only Show Cities With</h5>
                         <Filters
                             filters={filters}
                             setFilters={setFilters}
@@ -327,14 +328,14 @@ export default function Map() {
 function addFakeCityFeatures(data){
     var newData = Object.assign({}, data);
     let randomBoolean = (p) => {
-        if( p == undefined){
+        if( p === undefined){
             p = .5;
         }
         let num = Math.random()
         return num >= p
     }
     for(let city of newData.cities){
-        let parentCounty = newData.countys.filter( c => parseInt(c.GEOID) == parseInt(city.geoid));
+        let parentCounty = newData.countys.filter( c => parseInt(c.GEOID) === parseInt(city.geoid));
         try {
             parentCounty = parentCounty[0]
             city.maskMandate = parentCounty.mask_score > .8;

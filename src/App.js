@@ -13,9 +13,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
+  console.log('main app', this)
   return (
     <div className="App">
-       <Header/>
+      <Route component={Header}></Route>
       <Switch>
         <Route exact path='/' component={HomePage}></Route>
         <Route exact path='/map' component={Map}></Route>

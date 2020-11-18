@@ -162,9 +162,9 @@ export default class CovidMap extends React.Component{
             return 'inspect'
         } else if(isIn('Mask Mandate', filterNames) && !city.maskMandate){
             return 'hidden'
-        } else if(isIn('Schools Open', filterNames) && !city.schoolsOpen){
+        } else if(isIn('Schools Closed', filterNames) && city.schoolsOpen){
             return 'hidden'
-        } else if (isIn('Indoor Dining', filterNames) && !city.restaurantsOpen){
+        } else if (isIn('No Indoor Dining', filterNames) && city.restaurantsOpen){
             return 'hidden'
         }
         else{

@@ -20,17 +20,9 @@ border: 1px solid black;
 margin: 0 7.5px 15px;
 background-position: center;
 background-size: cover;
+cursor: pointer;
 
 }
-
-
-/* .menu-item:first-child {
-    margin-right: 7.5px;
-}
-
-.menu-item:last-child {
-    margin-left: 7.5px;
-} */
 
 .content {
     height: 90px;
@@ -40,6 +32,13 @@ background-size: cover;
     align-items: center;
     justify-content: center;
 }
+
+.navButtonText {
+    font-size: 3em;
+    font-weight: bold;
+    background: rgba(255,255,255,.5);
+}
+
 .content .title {
 font-weight: bold;
 margin-bottom: 6px;

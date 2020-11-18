@@ -52,10 +52,8 @@ class Activities extends React.Component {
 
     getTable(tableKey){
         var tableItems = activityData.filter(x => x.type === tableKey)
-        console.log(tableItems, tableItems[0].risk)
         var getRiskRows = (r,i) => {
             var cName = 'riskSquare ' + r + 'Risk';
-            console.log('risk', cName)
             return (<td key={i} className={cName}></td>)
         }
 

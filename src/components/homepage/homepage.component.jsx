@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 class HomePage extends React.Component {
-    constructor(){
+    constructor(props){
         super();
         this.state = {
             menuItems: [
@@ -44,14 +44,16 @@ class HomePage extends React.Component {
 
 
     render(){
-        const navButtons = this.state.menuItems.map( item => (
-            <Col md={6}>
-                <div className='menu-item' key={item.id} style={{backgroundImage: `url(${item.imageUrl})`}}>
-                    <div className='content'>
-                        <button key={item.id} type="button" className="btn btn-info btn-lg"
-                            onClick={() => this.props.history.push(`${item.url}`)}>
+        const navButtons = this.state.menuItems.map( (item,idx) => (
+            <Col key={idx} md={6}>
+                <div 
+                    className='menu-item' 
+                    key={item.id} 
+                    style={{backgroundImage: `url(${item.imageUrl})`}}
+                    onClick={() => this.props.history.push(`${item.url}`)}
+                >
+                    <div className='content navButtonText'>
                         {item.title}
-                        </button>
                     </div>
                 </div>
             </Col>
