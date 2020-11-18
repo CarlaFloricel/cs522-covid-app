@@ -22,10 +22,10 @@
     margin-left: -2em;
 }
 
-.lowRisk{
+/* .lowRisk{
     background: #fee0d2;
     fill: #fee0d2
-}
+} */
 
 .nav-item{
     background: aliceblue;
@@ -37,7 +37,7 @@
     box-shadow: 1px -1px blue;
 }
 
-.medRisk, .mediumRisk{
+/* .medRisk, .mediumRisk{
     background: #fc9272;
     fill: #fc9272;
 }
@@ -45,7 +45,7 @@
 .highRisk{
    background: #de2d26;
    fill: #de2d26; 
-}
+} */
 
 .activityTable{
     margin-top: 2em;

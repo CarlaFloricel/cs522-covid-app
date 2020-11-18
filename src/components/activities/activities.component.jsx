@@ -25,16 +25,16 @@ const activityData = [
     {type: "Socializing", name: "Visiting Friends", risk: ['high','medium','low','low']},
     {type: "Socializing", name: "Indoor Party", risk: ['high','high','medium','low']},
 
-    {type: "Travel", name: "Hotel stay", risk: ['high','medium','low','low']},
-    {type: "Travel", name: "Public Transport", risk: ['high','low','low','low']},
-    {type: "Travel", name: "Taxi/Uber", risk: ['high','low','low','low']},
-    {type: "Travel", name: "Flying", risk: ['high','medium','low','low']},
+    // {type: "Travel", name: "Hotel stay", risk: ['high','medium','low','low']},
+    // {type: "Travel", name: "Public Transport", risk: ['high','low','low','low']},
+    // {type: "Travel", name: "Taxi/Uber", risk: ['high','low','low','low']},
+    // {type: "Travel", name: "Flying", risk: ['high','medium','low','low']},
 
-    {type: "Comercial", name: "Retail Stores", risk: ['high','medium','low','low']},
-    {type: "Comercial", name: "Groceries", risk: ['high','medium','low','low']},
-    {type: "Comercial", name: "Haircut/Salon", risk: ['high','low','low','low']},
-    {type: "Comercial", name: "Ordering Takeout", risk: ['high','low','low','low']},
-    {type: "Comercial", name: "Gym", risk: ['high','medium','low','low']},
+    // {type: "Comercial", name: "Retail Stores", risk: ['high','medium','low','low']},
+    // {type: "Comercial", name: "Groceries", risk: ['high','medium','low','low']},
+    // {type: "Comercial", name: "Haircut/Salon", risk: ['high','low','low','low']},
+    // {type: "Comercial", name: "Ordering Takeout", risk: ['high','low','low','low']},
+    // {type: "Comercial", name: "Gym", risk: ['high','medium','low','low']},
 ]
 
 class Activities extends React.Component {
