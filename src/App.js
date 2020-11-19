@@ -8,6 +8,7 @@ import Vaccines from './components/vaccines/vaccines.component';
 import Faq from './components/faq/faq.component';
 import Map from './components/map/map.component';
 import Header from './components/header/header.component';
+import AboutProject from './components/about_project/about_project.component';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/vaccines' component={Vaccines}></Route>
         <Route exact path='/activities' component={Activities}></Route>
         <Route exact path='/faq' component={Faq}></Route>
+        <Route exact path='/about' component={AboutProject}></Route>
       </Switch>
 
     </div>

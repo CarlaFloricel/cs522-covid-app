@@ -8,7 +8,8 @@ const navLinks = [
     {btnText: 'Safe Travel', btnId: 'map'},
     {btnText: 'Vaccines', btnId: 'vaccines'},
     {btnText: 'Activities', btnId: 'activities'},
-    {btnText: 'FAQ', btnId: 'faq'}
+    {btnText: 'FAQ', btnId: 'faq'},
+    {btnText: 'About Project', btnId: 'about'}
 ]
 
 const Header = (props) => {
