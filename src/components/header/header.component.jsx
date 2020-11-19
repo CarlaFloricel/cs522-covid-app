@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './header.styles.css';
-
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 
 const navLinks = [
@@ -23,11 +23,14 @@ const Header = (props) => {
         var isActive = isButtonActive(navItem);
         var btnClass = isActive? 'outline-info':'info';
         return (
-            <Link key={navItem.btnId} to={'/' + navItem.btnId} className="option">
-                <Button variant={btnClass} disabled={isActive} className={'headerButton btn btn-lg'}>
-                    {navItem.btnText}
-                </Button>
-            </Link>
+
+            <Nav.Link >
+                <Link key={navItem.btnId} to={'/' + navItem.btnId} className="option">
+                    <Button variant={btnClass} disabled={isActive} className={'headerButton btn btn-lg'}>
+                        {navItem.btnText}
+                    </Button>
+                </Link>
+            </Nav.Link>
         )
     }
     const navOptions = navLinks.map(getNavButton)
@@ -35,21 +38,24 @@ const Header = (props) => {
     const atHome = (currPage === '/');
     const homeVariant = atHome? 'outline-info': 'info';
 
-    return (
-        <div className="headerContainer">
-            {/* <h1>Explore Covid-19</h1> */}
-        <div className='header'>
-            <Link to="/" className="logo-container">
-                <Button disabled={atHome} variant={homeVariant} className={"headerButton btn btn-lg"}>
-                    <i className="fa fa-home" ></i>
-                    Home
-                </Button>
+    return (       
+        <Navbar bg="#f0f8ff" style={{backgroundColor: '#f0f8ff'}} expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+            <Nav.Link >
+            <Link to="/" className="option">
+            <Button disabled={atHome} variant={homeVariant} className="btn btn-info btn-lg">
+                 Home
+            </Button>
             </Link>
-            <div className='options'>
-                {navOptions}
-            </div>
-        </div>
-        </div>
+            </Nav.Link>
+            </Nav>
+            {navOptions}
+
+        </Navbar.Collapse>
+        </Navbar>
+
     )
 }
 

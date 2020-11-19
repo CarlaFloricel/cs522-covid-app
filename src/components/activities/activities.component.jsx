@@ -16,7 +16,7 @@ const activityData = [
     {type: "Outdoor", name: "Walking", risk: ['high','low','low','low']},
     {type: "Outdoor", name: "Camping", risk: ['high','medium','low','low']},
     {type: "Outdoor", name: "Dining", risk: ['high','high','medium','low']},
-    {type: "Outdoor", name: "Concert/SPorts", risk: ['high','high','medium','low']},
+    {type: "Outdoor", name: "Concert/Sports", risk: ['high','high','medium','low']},
 
     {type: "Socializing", name: "Office work", risk: ['high','medium','low','low']},
     {type: "Socializing", name: "Indoor Dining", risk: ['high','medium','low','low']},
@@ -101,33 +101,28 @@ class Activities extends React.Component {
 
         return (
             <Container fluid="md" id='activityBody'>
-                <Row id='activityHeader' md={12}>
-                    <Col md={12}><h3>Risk Factors of Common Activities</h3></Col>
-                </Row>
-                <Row className='activityLegend' md={12}>
-                    <Col md={3}></Col>
+                    <div ><h3>Risk Factors of Common Activities</h3></div>
+
+
+                    
+                    <div className="legend-container">
                     <Col className={"activityLegend"} md={1}>
-                        <div className={'square lowRisk'}/>
-                    </Col>
-                    <Col className={"activityLegend"}  md={1}>
                         <h6>Low</h6>
-                    </Col>
-                    <Col className={"activityLegend"} md={1}>
-                        <div className={'square medRisk'}/>
+                        <div className={'square lowRisk'}/>
+                       
                     </Col>
                     <Col className={"activityLegend"} md={1}>
                         <h6>Medium</h6>
-                    </Col>
-                    <Col className={"activityLegend"} md={1}>
-                        <div className={'square highRisk'}/>
+                        <div className={'square medRisk'}/>
                     </Col>
                     <Col className={"activityLegend"} md={1}>
                         <h6>High</h6>
+                        <div className={'square highRisk'}/>
                     </Col>
-                    <Col md={3}></Col>
-                </Row>
-                <Row className="activityTable" md={12}>
-                    <Col md={12}>
+                    </div>
+
+                <Row className="activityTable" >
+                    <Col>
                         <Tabs defaultActiveKey={activityTypes[0]}>
                             {riskTables}
                         </Tabs>

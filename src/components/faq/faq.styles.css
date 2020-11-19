@@ -1,5 +1,5 @@
 .faq-list {
-    width: 92vw;
+    width: 90vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -22,7 +22,7 @@
 
 /*styling for carla's original faq stuff*/
 .question-container {
-    width: 85vw;
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -32,6 +32,7 @@
 }
 .question {
     display:flex;
+
 }
 
 /* the new styling from andrews stuff */
@@ -40,6 +41,7 @@
     font-size: 1.2em;
     font-weight: medium;
     cursor: pointer;
+    
 }
 
 .replyCard{

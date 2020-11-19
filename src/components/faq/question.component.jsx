@@ -16,7 +16,8 @@ export const Question = (props) => {
             </Accordion.Toggle>
             <Accordion.Collapse eventKey={''+idx}>
                 <Card.Body className="replyCard">
-                    {i.reply}
+                    <div>{i.reply}</div>
+                    <a href={i.link}> Click here for more information</a>
                 </Card.Body>
             </Accordion.Collapse>
         </Card>

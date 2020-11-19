@@ -18,7 +18,7 @@
     height: 2em;
 }
 .activityLegend > h6{
-    margin-left: -2em;
+    margin-bottom: 0.6em;
 }
 
 .lowRisk{
@@ -57,3 +57,36 @@ td{
     margin: 0px;
     padding: 0px;
 }
+
+.legend-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:200px;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+
+    .activityTable {
+        transform: scale(0.7);
+        margin-top: -50px;
+        
+      
+    }
+    tr{
+        transform: scale(0.9);
+        
+    }
+    .nav-item {
+        transform: scale(1.6);
+        width: 100%;
+        
+    }
+
+    .legend-container{
+        width: 100%;
+        margin-left: 20px;
+    }
+  }

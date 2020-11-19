@@ -1,19 +1,18 @@
-.header {
+/* .header {
     height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
     background: aliceblue;
-} 
+}  */
 .header .logo-container {
     padding: 0px 15px 30px 85px;
     margin-top: 1vh;
 }
 
 .header .options {
-    width: 50%;
-    height: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -28,11 +27,21 @@ padding: 20px 15px 30px 15px;
     padding: 20px 85px 30px 15px;
 }
 
-.headerButton{
+/* .headerButton{
     width: 100%;
-}
+} */
 h1 {
     padding:20px;
     display: flex;
     justify-content: flex-start;
 }
+
+
+@media only screen and (max-width: 400px) {
+
+    /* button {
+      transform: scale(0.6);
+
+    } */
+
+  }
