@@ -1,5 +1,6 @@
 import React from 'react';
 import * as d3 from 'd3';
+import legend from 'd3-svg-legend';
 import './map.styles.css';
 
 export default class CovidMap extends React.Component{
@@ -68,7 +69,6 @@ export default class CovidMap extends React.Component{
                 this.g.selectAll('.cityName').attr("font-size", (d) => 250/((scale**.5)*this.scale) + 'em')
             }
         }
-        console.log(this.props.inspectCitys)
     }
 
     drawCountys(){
@@ -77,7 +77,6 @@ export default class CovidMap extends React.Component{
 
             this.props.colorMap.fitValues(this.props.data.countys);
             let colorScale = this.props.colorMap.getColorScale()
-
             let countys = this.g.selectAll('path')
                 .filter('.county')
 
@@ -87,13 +86,31 @@ export default class CovidMap extends React.Component{
                 .attr('d', d=> this.path(d.features))
                 .attr('fill',colorScale);
             countys.exit().remove()
+
+            this.svg.selectAll('.legend').remove()
+            var cases = d3.extent(this.props.data.countys.map(x=>x.cases/x.cvap))
+            var colorMin = this.props.colorMap.props.interpolator(0)
+            var colorMax = this.props.colorMap.props.interpolator(1)
+            var legendScale = d3.scaleLinear()
+                .domain(cases)
+                .range([colorMin, colorMax])
+
+            var colorLegend = legend.legendColor()
+                .scale(legendScale)
+                .labelFormat(d3.format(".0%"))
+                .shape('circle')
+                .title('Cases/Person')
+                .labelWrap(10)
+                
+            this.svg.append('g')
+                .attr('class','legend')
+                .attr('transform', 'translate(' + (this.width - 100) + ',' + (this.height/1.8) + ')')
+                .call(colorLegend)
         }
     }
 
     cityOnClicks(d,city){
         //for some reason i is the data this time?
-        console.log(d,city)
-        console.log(this.props)
         let cityIdx = this.props.inspectCitys.indexOf(city.name)
         var newInspectCitys
         if (cityIdx > -1){
@@ -199,7 +216,7 @@ export default class CovidMap extends React.Component{
 
     render(){
         return <div className='covidMapBody'>
-            <h4>Select A City</h4>
+            <h4 id='covidMapTitle'>Select A City To Stop At</h4>
             <div className='covidMapCanvas' ref={this._setRef.bind(this)}/>
         </div>
     }

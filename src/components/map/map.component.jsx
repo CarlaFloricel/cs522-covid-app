@@ -250,7 +250,6 @@ export default function Map() {
         const res = await fetch("https://raw.githubusercontent.com/tehwentzel/cd_map/master/resources/countys_with_cities_hci.json")
         var data = await res.json();
         data = addFakeCityFeatures(data);
-        console.log('the data', data)
         setData(data)
     }
 
@@ -285,7 +284,7 @@ export default function Map() {
             </Col>
             <Col md={10}>
                 <Row md={12}>
-                    <Col md={8}>
+                    <Col md={9}>
                         <div id='covidMap'>
                             <CovidMap
                                 data={data}
@@ -299,7 +298,7 @@ export default function Map() {
                             />
                         </div>
                     </Col>
-                    <Col md={4}>
+                    <Col md={3}>
                         <Itinerary
                             startCity={startCity}
                             destinationCity={destinationCity}
