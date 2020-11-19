@@ -10,9 +10,10 @@
 }
 .covidMapCanvas{
     height: calc(100% - 2em);
+    margin-top: -.5em;
+    z-index: 0;
     width: 100%;
 }
-
 #mapControls{
     height: 35vh;
     width: 100%;
