@@ -1,7 +1,30 @@
 import React from 'react';
 import './faq.styles.css';
 import {Question} from './question.component';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
+const links = [
+    {category: 'Official Resources', linkList: [
+        {title: 'CDC Resources', url: 'https://www.cdc.gov/coronavirus/2019-ncov/your-health/need-to-know.html'},
+        {title: "WHO Resources", url: 'https://www.who.int/emergencies/diseases/novel-coronavirus-2019'},
+        {title: "NIH Resources", url: 'https://www.nih.gov/coronavirus'}
+    ]},
+    {category: 'Covid Case Trackers', linkList: [
+        {title: 'John Hopkins Covid Tracker', url: 'https://coronavirus.jhu.edu/us-map'},
+        {title: 'NPR Coronavirus By Numbers', url: 'https://www.npr.org/sections/health-shots/2020/09/01/816707182/map-tracking-the-spread-of-the-coronavirus-in-the-u-s'},
+        {title: 'NYT Interactive Map and Cases', url: 'https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html'},
+        {title: 'CMU CovidCast', url: 'https://covidcast.cmu.edu/?sensor=doctor-visits-smoothed_adj_cli&level=county&date=20200917&signalType=value&encoding=color&mode=overview&region=42003'}
+    ]},
+    {category: 'Vaccines', linkList: [
+        {title: 'NYT Vaccine Tracker', url: 'https://www.nytimes.com/interactive/2020/science/coronavirus-vaccine-tracker.html'},
+        {title: 'CDC Vaccine Planning', url: 'https://www.cdc.gov/coronavirus/2019-ncov/vaccines/8-things.html'},
+        {title: 'HHS Operation Warp Speed', url: 'https://www.hhs.gov/coronavirus/explaining-operation-warp-speed/index.html'}
+    ]}
+]
 
 class Faq extends React.Component {
     constructor(){
@@ -9,6 +32,39 @@ class Faq extends React.Component {
         this.state = {
             searchField:''
         }
+    }
+
+
+    createLinks(links){
+
+        var toLink = (linkItem) => {
+            return (
+                <a className={'externalResource'} href={linkItem.url}>{linkItem.title}</a>
+            )
+        }
+
+        var toLinkGroup = (linkGroup) => {
+            var links = linkGroup.linkList.map(toLink)
+            return (
+                <ListGroup.Item>
+                    <Card.Title>
+                    {linkGroup.category}
+                    </Card.Title>
+                    <Card.Text className={'externalResource'}>
+                        {links}
+                    </Card.Text>
+                </ListGroup.Item>
+            )
+        }
+
+        return (
+            <Card>
+                <Card.Header as="h4">External Resources</Card.Header>
+                <ListGroup>
+                    {links.map(toLinkGroup)}
+                </ListGroup>
+            </Card>
+        )  
     }
 
 
@@ -39,24 +95,36 @@ class Faq extends React.Component {
                                 {name: "Symptoms & Emergency Warning Signs", items: symptoms_q},
                                 {name: "Testing", items: testing_q}, {name: "Children", items: children_q},
                                 {name: "People at higher risk for severe illness", items: risk_q}, {name: "Contact tracing", items: contact_q}]
+
+        const resourceLinks = this.createLinks(links);
     return(
-            
-            <div>
+        <Container fluid='lg'> 
+            <Row md={12}>
+                <Col md={12}>
                 <input
-                className="search-bar"
-                type='search'
-                placeholder='Search'
-                onChange={e => this.setState({searchField: e.target.value})}>
-                </input>
-                {questions_type.map((i,iKey) => (
-                   i.items.length>0 ?
-                    <div className='faq-list' key={iKey}>
-                    <h3 className="faq_element">{i.name}</h3>
-                    <Question list = {i.items}/>
-                    </div>
-                : <div key={iKey}></div>
-                ))}
-            </div>
+                    className="search-bar"
+                    type='search'
+                    placeholder='Search'
+                    onChange={e => this.setState({searchField: e.target.value})}>
+                    </input>
+                </Col>
+            </Row>
+            <Row md={12}>
+                <Col md={8} className={'scrollWindow'}>
+                    {questions_type.map((i,iKey) => (
+                    i.items.length>0 ?
+                        <div className='faq-list' key={iKey}>
+                        <h3 className="faq_element">{i.name}</h3>
+                        <Question list = {i.items}/>
+                        </div>
+                    : <div key={iKey}></div>
+                    ))}
+                </Col>
+                <Col md={4} className={'externalLinks'}>
+                    {resourceLinks}
+                </Col>
+            </Row>
+        </Container>  
         )
     }
 }

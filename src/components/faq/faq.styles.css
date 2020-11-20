@@ -1,14 +1,14 @@
 .faq-list {
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
-    grid-gap:20px;
+    grid-gap:20px; */
 }
 .faq_element {
     width: 90vw;
     margin: auto;
-    margin-top: 1em;
+    margin-top: .5em;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap:20px;
@@ -19,10 +19,30 @@
     width: 35vw;
     margin:0 5%;
 }
+.externalResource{
+    width: 100%!important;
+    display: block;
+    text-align: left;
+    font-size: 1em;
+}
+.externalLinks{
+    margin-top: 2em;
+    font-size: 1.2em;
+}
+
+.scrollWindow{
+    overflow-y: scroll;
+    max-height: calc(100vh - 4em);
+    margin-top: 1em;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* make scrollbar invisible, works in chrome, idk about firefox*/
+}
 
 /*styling for carla's original faq stuff*/
 .question-container {
-
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -32,7 +52,6 @@
 }
 .question {
     display:flex;
-
 }
 
 /* the new styling from andrews stuff */

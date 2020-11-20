@@ -50,10 +50,10 @@ export default class CovidMap extends React.Component{
         let cities = this.props.data.cities;
         let startCity = this.props.startCity;
         let destinationCity = this.props.destinationCity;
-        if(cities != undefined){
-            let start = cities.filter(x => x.name == startCity)[0]
-            let destination = cities.filter(x => x.name == destinationCity)[0]
-            if(start != undefined && destination != undefined){
+        if(cities !== undefined){
+            let start = cities.filter(x => x.name === startCity)[0]
+            let destination = cities.filter(x => x.name === destinationCity)[0]
+            if(start !== undefined && destination !== undefined){
                 let projection = this.projection;
                 let cityPosition = function(d){
                     return projection([d.lon, d.lat])
@@ -123,7 +123,7 @@ export default class CovidMap extends React.Component{
     }
 
     drawCities(){
-        if(this.props.data.cities != undefined){
+        if(this.props.data.cities !== undefined){
             this.g.selectAll('g').filter('.cityGroup').remove()
             
             var projection = this.projection;
@@ -171,7 +171,7 @@ export default class CovidMap extends React.Component{
             return collection.indexOf(item) > -1
         }
         let filterNames = props.filters.filter(x => x.active).map(x=> x.name);
-        if (city.name == props.destinationCity || city.name == props.startCity){
+        if (city.name === props.destinationCity || city.name === props.startCity){
             return 'primary'
         } else if(isIn(city.name, props.itineraryCitys)){
             return 'itinerary'
