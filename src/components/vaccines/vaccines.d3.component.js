@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
 import './vaccines.styles.css';
+import d3Tip from 'd3-tip'
 
 // const url = 'https://udemy-react-d3.firebaseio.com/ages.json'
 const vaccines = require('./vaccines.json')
@@ -43,38 +44,69 @@ export default class D3DummyChart {
             .selectAll("text")	  
             // .style("font-size", '1em')          
             // .attr("transform", "rotate(-20)");
-
         const group = svg.append("g")
-        // for(let item of vaccines){
-        const rects = group.selectAll('rect')
-            .data(vaccines)
-        //start to trial
-        // "starting trial production ending"
-        rects.enter()
-            .append('rect')
-            .attr("x", (d) => {return xScale(d["starting"])})
-            .attr("y", (d) => {return yScale(d.name)})
-            .attr("width", (d) => {return (xScale(d["trial"]) - xScale(d["starting"]))})
-            .attr("height", 20)
-            .attr("fill", "#d7191c")
-        
-        //trial to production
-        rects.enter()
-            .append('rect')
-            .attr("x", (d) => {return xScale(d["trial"])})
-            .attr("y", (d) => {return yScale(d.name)})
-            .attr("width", (d) => {return (xScale(d["production"]) - xScale(d["trial"]))})
-            .attr("height", 20)
-            .attr("fill", "#fdae61")
-        //production to end
-        rects.enter()
-            .append('rect')
-            .attr("x", (d) => {return xScale(d["production"])})
-            .attr("y", (d) => {return yScale(d.name)})
-            .attr("width", (d) => {return (xScale(d["ending"]) - xScale(d["production"]))})
-            .attr("height", 20)
-            .attr("fill", "#2c7bb6")
-        // }
+
+        for(let item of vaccines){
+            //tooltip
+            let trialTip = d3Tip().attr('class', 'd3-tip').
+                                html(function() { 
+                                    let tip = `Name : ${item.name} <br>
+                                    Trial : ${item.trial} to ${item.testing}`
+                                    return tip; 
+                                });
+
+            let testingTip = d3Tip().attr('class', 'd3-tip')
+                            .html(function() { 
+                                let tip = `Name : ${item.name} <br>
+                                    Testing : ${item.testing} to ${item.production}`
+                                return tip;
+                             });
+            let productionTip = d3Tip().attr('class', 'd3-tip')
+                                .html(function() {
+                                    let tip = `Name : ${item.name} <br>
+                                    Production : ${item.production} to ${item.ending}`
+                                     return tip; 
+                                    });
+
+           // calling the tips
+            svg.call(trialTip)
+            svg.call(testingTip)
+            svg.call(productionTip)
+            // console.log(item["trial"])
+            // let rects = group.selectAll('rect')
+                // .data(item)
+            //start to testing
+            // rects.enter()
+            group.append('rect')
+                .attr("x", () => {return xScale(item["trial"])})
+                .attr("y", () => {return yScale(item.name)})
+                .attr("width", () => {return (xScale(item["testing"]) - xScale(item["trial"]))})
+                .attr("height", 20)
+                .attr("fill", "#d7191c")
+                .on('mouseover', trialTip.show)
+                .on('mouseout', trialTip.hide)
+            
+            //testing to production
+            // rects.enter()
+            group.append('rect')
+                .attr("x", () => {return xScale(item["testing"])})
+                .attr("y", () => {return yScale(item.name)})
+                .attr("width", () => {return (xScale(item["production"]) - xScale(item["testing"]))})
+                .attr("height", 20)
+                .attr("fill", "#fdae61")
+                .on('mouseover', testingTip.show)
+                .on('mouseout', testingTip.hide)
+            //production to end
+            // rects.enter()
+            group.append('rect')
+                .attr("x", () => {return xScale(item["production"])})
+                .attr("y", () => {return yScale(item.name)})
+                .attr("width", () => {return (xScale(item["ending"]) - xScale(item["production"]))})
+                .attr("height", 20)
+                .attr("fill", "#2c7bb6")
+                .on('mouseover', productionTip.show)
+                .on('mouseout', productionTip.hide)
+        }
 
 
         function make_x_axis() {    
