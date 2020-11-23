@@ -4,71 +4,89 @@
         "name": "Inactivated Virus",
         "stage": "RR",
         "description": "These consist of viruses grown in culture and then killed as a means to reduce virulence (ability to infect and cause harm) and thus prevent infection from the vaccine. One benefit is they can be given to people with weakened immune systems. Examples include polio and influenza vaccines.",
-        "starting-date": "Jun 20",
-        "ending-date": "Feb 21"
+        "starting": "Jun 20",
+        "trial": "Aug 20",
+        "production":"Dec 20",
+        "ending": "Feb 21"
     },
     {
         "id": 2,
         "name": "Life Attenuated Virus",
         "stage": "1",
         "description": "In contrast to inactivated virus vaccines, these vaccines, also whole viruses, are live to elicit a stronger immune response but weakened to reduce virulence. Examples include those for measles, mumps, and tuberculosis.",
-        "starting-date": "Jun 20",
-        "ending-date": "Mar 21"
+        "starting": "Jun 20",
+        "trial": "Sep 20",
+        "production":"Jan 21",
+        "ending": "Mar 21"
     },
     {
         "id": 3,
         "name": "Protein Subnit",
         "stage": "3",
         "description": "These next-gen vaccines work through introducing viral genetic material (DNA) that cells use to make viral proteins that induce a range of immune response types. They can potentially be developed more quickly and easily than other vaccines, but no DNA vaccines have been approved for human use.",
-        "starting-date": "Jun 20",
-        "ending-date": "Feb 21"
+        "starting": "Jun 20",
+        "trial": "Aug 20",
+        "production":"Dec 20",
+        "ending": "Feb 21"
     },
     {
         "id": 4,
         "name": "DNA-Based",
         "stage": "3",
         "description": "These consist of viruses grown in culture and then killed as a means to reduce virulence (ability to infect and cause harm) and thus prevent infection from the vaccine. One benefit is they can be given to people with weakened immune systems. Examples include polio and influenza vaccines.",
-        "starting-date": "May 20",
-        "ending-date": "Feb 21"
+        "starting": "May 20",
+        "trial": "Jul 20",
+        "production":"Nov 20",
+        "ending": "Feb 21"
     },
     {
         "id": 5,
         "name": "RNA-Based",
         "stage": "3",
         "description": "Similar to DNA vaccines, these experimental vaccines provide immunity through introduction of genetic material (RNA). RNA vaccines can also be potentially developed more quickly and easily than other vaccines. No RNA vaccines have been approved for human use.",
-        "starting-date": "Jul 20",
-        "ending-date": "Jan 21"
+        "starting": "Jul 20",
+        "trial": "Oct 20",
+        "production":"Dec 20",
+        "ending": "Jan 21"
     },
     {
         "id": 6,
         "name": "Replicating Viral Vector",
         "stage": "1",
         "description": "This involves putting a gene for a viral protein into a different virus (one that will not cause illness but can replicate). Replication of the viral vector also produces copies of the viral protein, which triggers an immune response to that protein. Examples include ebola and dengue vaccines.",
-        "starting-date": "Jul 20",
-        "ending-date": "Feb 21"
+        "starting": "Jul 20",
+        "trial": "Sep 20",
+        "production":"Dec 20",
+        "ending": "Feb 21"
     },
     {
         "id": 7,
         "name": "Non-Replicating Viral Vector",
         "stage": "RR",
         "description": "This approach is similar to replicating viral vector vaccines in that a viral gene is added to a different, non-replicating, virus and delivered to the vaccine recipient. No approved product of this kind has resulted to date.",
-        "starting-date": "Jun 20",
-        "ending-date": "Apr 21"
+        "starting": "Jun 20",
+        "trial": "Oct 20",
+        "production":"Feb 21",
+        "ending": "Apr 21"
     },
     {
         "id": 8,
         "name": "Virus-like Particle",
         "stage": "PRE",
         "description": "Virus-like particle (VLP) vaccines closely resemble viruses but are non-infectious because they contain no viral genetic material. Since VLPs cannot replicate, they provide a safer alternative to attenuated viruses. Examples include the HPV vaccine.",
-        "starting-date": "Jul 20",
-        "ending-date": "May 21"
+        "starting": "Jul 20",
+        "trial": "Nov 20",
+        "production":"Mar 21",
+        "ending": "May 21"
     },
     {
         "id": 9,
         "name": "Other Vaccines",
         "stage": "PRE",
         "description": "From a gene-encoded antibody vaccine to a self-assembling vaccine and more, these are the vaccines being developed that do not fall easily into one of the other product categories or details about its category are not publicly available.",
-        "starting-date": "Jul 20",
-        "ending-date": "Jun 21"
+        "starting": "Jul 20",
+        "trial": "Jan 21",
+        "production":"Apr 21",
+        "ending": "Jun 21"
     }
 ]

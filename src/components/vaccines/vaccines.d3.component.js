@@ -40,21 +40,41 @@ export default class D3DummyChart {
                      .scale(yScale)
 
         svg.append("g").call(yAxis).attr("transform", "translate(150,0)")
-            .selectAll("text")	            
+            .selectAll("text")	  
+            // .style("font-size", '1em')          
             // .attr("transform", "rotate(-20)");
 
         const group = svg.append("g")
-        for(let item of vaccines){
-            const rects = group.selectAll('rect')
-                .data(vaccines)
-            rects.enter()
-                .append('rect')
-                .attr("x", (d) => {return xScale(d["starting-date"])})
-                .attr("y", (d) => {return yScale(d.name)})
-                .attr("width", (d) => {return (xScale(d["ending-date"]) - xScale(d["starting-date"]))})
-                .attr("height", 20)
-                .attr("fill", "green")
-        }
+        // for(let item of vaccines){
+        const rects = group.selectAll('rect')
+            .data(vaccines)
+        //start to trial
+        // "starting trial production ending"
+        rects.enter()
+            .append('rect')
+            .attr("x", (d) => {return xScale(d["starting"])})
+            .attr("y", (d) => {return yScale(d.name)})
+            .attr("width", (d) => {return (xScale(d["trial"]) - xScale(d["starting"]))})
+            .attr("height", 20)
+            .attr("fill", "#d7191c")
+        
+        //trial to production
+        rects.enter()
+            .append('rect')
+            .attr("x", (d) => {return xScale(d["trial"])})
+            .attr("y", (d) => {return yScale(d.name)})
+            .attr("width", (d) => {return (xScale(d["production"]) - xScale(d["trial"]))})
+            .attr("height", 20)
+            .attr("fill", "#fdae61")
+        //production to end
+        rects.enter()
+            .append('rect')
+            .attr("x", (d) => {return xScale(d["production"])})
+            .attr("y", (d) => {return yScale(d.name)})
+            .attr("width", (d) => {return (xScale(d["ending"]) - xScale(d["production"]))})
+            .attr("height", 20)
+            .attr("fill", "#2c7bb6")
+        // }
 
 
         function make_x_axis() {    
