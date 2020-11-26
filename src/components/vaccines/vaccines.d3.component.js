@@ -1,17 +1,19 @@
 import * as d3 from 'd3'
 import './vaccines.styles.css';
 import d3Tip from 'd3-tip'
+import VaccineDetails from './vaccines.details.component';
 
 // const url = 'https://udemy-react-d3.firebaseio.com/ages.json'
 const vaccines = require('./vaccines.json')
 const domainX = ["May 20", "Jun 20", "Jul 20", "Aug 20", "Sep 20", "Oct 20", "Nov 20", "Dec 20",  "Jan 21", "Feb 21", "Mar 21", "Apr 21", "May 21", "Jun 21"]
 const domainY = ["Inactivated Virus", "Life Attenuated Virus", "Protein Subnit", "DNA-Based", "RNA-Based", "Replicating Viral Vector", "Non-Replicating Viral Vector", "Virus-like Particle", "Other Vaccines"]
+const height = 300;
 export default class D3DummyChart {
-    constructor(element) {
-        const svg = d3.select(element)
+    constructor(chart, legend, details) {
+        const svg = d3.select(chart)
             .append("svg")
             .attr("width", 825)
-            .attr("height", 300)
+            .attr("height", height)
 
         let xScale = d3.scalePoint()
                         .domain(domainX)
@@ -85,6 +87,8 @@ export default class D3DummyChart {
                 .attr("fill", "#d7191c")
                 .on('mouseover', trialTip.show)
                 .on('mouseout', trialTip.hide)
+                .style('cursor', 'pointer')
+                .on('click', () => {new VaccineDetails(details, item)})
             
             //testing to production
             // rects.enter()
@@ -96,6 +100,8 @@ export default class D3DummyChart {
                 .attr("fill", "#fdae61")
                 .on('mouseover', testingTip.show)
                 .on('mouseout', testingTip.hide)
+                .style('cursor', 'pointer')
+                .on('click', () => {new VaccineDetails(details, item)})
             //production to end
             // rects.enter()
             group.append('rect')
@@ -106,7 +112,36 @@ export default class D3DummyChart {
                 .attr("fill", "#2c7bb6")
                 .on('mouseover', productionTip.show)
                 .on('mouseout', productionTip.hide)
+                .style('cursor', 'pointer')
+                .on('click', () => {new VaccineDetails(details, item)})
         }
+
+        //create legend
+        const legendSvg = d3.select(legend)
+                            .append('svg')
+                            .attr('width', 100)
+                            .attr('height', height)
+        
+        const color = ["#d7191c", "#fdae61", "#2c7bb6"]
+        const type = ["Trial", "Testing", "Production"]
+        legendSvg.append("g")
+                .selectAll('rect')
+                .data(color)
+                .enter()
+                .append('rect')
+                .attr("x", 0)
+                .attr('y', (d,i) => {return 10 + 20 * i})
+                .attr("width", 15)
+                .attr("height", 15)
+                .attr('fill', (d) => {return d})
+        legendSvg.append('g')
+            .selectAll('text')
+            .data(type)
+            .enter()
+            .append('text')
+            .attr('x', 20)
+            .attr('y', (d,i) => {return 22 + 20 * i})
+            .text((d) => {return d})
 
 
         function make_x_axis() {    
