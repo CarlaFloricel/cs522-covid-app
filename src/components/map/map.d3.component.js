@@ -32,12 +32,12 @@ export default class CovidMap extends React.Component{
 
         this.g = this.svg.append('g').attr('class', 'map-g')
 
-        this.scale = Math.min(this.width, this.height)
+        this.scale = Math.min(1*this.width, 1*this.height)
         this.aspectRatio = this.width/this.height;
 
         this.projection = d3.geoAlbersUsa()
             .translate([this.width/2, this.height/2])
-            .scale(this.scale)
+            .scale(1.8*this.scale)
 
         this.path = d3.geoPath().projection(this.projection);
 

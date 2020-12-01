@@ -235,13 +235,13 @@ export default function Map() {
 
     let defaultFilters = [
         {name: 'Mask Mandate', active: false, icon: () => {return (<FaMask/>)}},
-        {name: "Schools Closed", active: true, icon: () => {return (<FaSchool/>)}},
+        {name: "Schools Closed", active: false, icon: () => {return (<FaSchool/>)}},
         {name: 'No Indoor Dining', active: false, icon: () => {return (<FaHamburger/>)}},
     ]
     const [filters, setFilters] = useState(defaultFilters);
-    const [startCity, setStartCity] = useState('New York');
-    const [destinationCity, setDestinationCity] = useState('Los Angeles');
-    const [inspectCitys, setInspectCitys] = useState(['Chicago','Houston','Denver']);
+    const [startCity, setStartCity] = useState('');
+    const [destinationCity, setDestinationCity] = useState('');
+    const [inspectCitys, setInspectCitys] = useState([]);
     const [itineraryCitys, setItineraryCities] = useState([]);
 
     const colorMap = new ColorMap({interpolator: d3.interpolateReds, transform: x => (x.cases/x.cvap)**.5});
