@@ -225,7 +225,7 @@ const Itinerary = ({startCity, destinationCity, itineraryCitys,setItineraryCitie
                 {makeStop(startCity,false)}
                 {cityStops}
                 {makeStop(destinationCity,false)}
-                <Button variant='success'>
+                <Button variant='success' onClick={() => {window.print()}}>
                     Export Trip
                 </Button>
             </Container>
