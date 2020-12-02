@@ -191,6 +191,9 @@ const MapComparerizer = ({data, inspectCitys, itineraryCitys, setItineraryCities
 const Itinerary = ({startCity, destinationCity, itineraryCitys,setItineraryCities}) => {
 
     var makeStop = function(name, isStop){
+        if(name === ''){
+            return 
+        }
         var circleClass = isStop? 'city-itinerary':'city-primary';
         var removeFromItinerary = function(){
             var newItinerary = itineraryCitys.filter(x => x !== name)
