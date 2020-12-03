@@ -1,0 +1,42 @@
+.video_component{
+
+    padding:2% !important;
+}
+
+.subcomponent {
+    text-align: left;
+    padding:3% !important;
+}
+
+h1 {
+    margin-left: -20px !important;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+h5 {
+    margin-left:30px !important;
+}
+
+.sketches{
+    transform: scale(0.8);
+    margin:-20px;
+    margin-left: -50px;
+}
+
+.second_sketches_row{
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+.sketches_prototype{
+    padding:10px;
+}
+
+.profile_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
