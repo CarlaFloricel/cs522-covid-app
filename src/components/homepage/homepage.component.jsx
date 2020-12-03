@@ -18,25 +18,25 @@ class HomePage extends React.Component {
                    title: "Safe Travel",
                    imageUrl: mapImg,
                    id: 1,
-                   url: '/map'
+                   url: '/cs522-covid-app/map'
                },
                {
                     title: "Vaccines",
                     imageUrl: vaccinesImg,
                     id: 2,
-                    url: '/vaccines'
+                    url: '/cs522-covid-app/vaccines'
                 },
                 {
                     title: "Activities",
                     imageUrl: activitiesImg,
                     id: 3,
-                    url: '/activities'
+                    url: '/cs522-covid-app/activities'
                 },
                 {
                     title: "FAQ",
                     imageUrl: faqImg,
                     id: 4,
-                    url: '/faq'
+                    url: '/cs522-covid-app/faq'
                 },
             ]
         }

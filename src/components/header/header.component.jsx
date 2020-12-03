@@ -13,10 +13,10 @@ const navLinks = [
 ]
 
 const Header = (props) => {
-    var currPage = (props.location === undefined)? '/' : props.location.pathname;
+    var currPage = (props.location === undefined)? '/cs522-covid-app' : props.location.pathname;
 
     var isButtonActive = (navItem) => {
-        var isActive = (currPage == '/' + navItem.btnId);
+        var isActive = (currPage == '/cs522-covid-app/' + navItem.btnId);
         return isActive
     }
     
@@ -26,7 +26,7 @@ const Header = (props) => {
         return (
 
             <Nav.Link >
-                <Link key={navItem.btnId} to={'/' + navItem.btnId} className="option">
+                <Link key={navItem.btnId} to={'/cs522-covid-app/' + navItem.btnId} className="option">
                     <Button variant={btnClass} disabled={isActive} className={'headerButton btn btn-lg'}>
                         {navItem.btnText}
                     </Button>
@@ -36,7 +36,7 @@ const Header = (props) => {
     }
     const navOptions = navLinks.map(getNavButton)
 
-    const atHome = (currPage === '/');
+    const atHome = (currPage === '/cs522-covid-app');
     const homeVariant = atHome? 'outline-info': 'info';
 
     return (       
@@ -45,7 +45,7 @@ const Header = (props) => {
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
             <Nav.Link >
-            <Link to="/" className="option">
+            <Link to="/cs522-covid-app" className="option">
             <Button disabled={atHome} variant={homeVariant} className="btn btn-info btn-lg">
                  Home
             </Button>
