@@ -56,29 +56,61 @@ class AboutProject extends React.Component {
                 <Container className="container" style={{backgroundColor:"#f0f8ff"}}>
                 <h1>Requirements Gathering</h1>
                     <Row>
-                        <Col md={6} className="subcomponent">
+                        <Col md={8} className="subcomponent">
                             <p>In order to make our project useful, we needed to understand what people think and know about this pandemic.We conducted 6 interviews with different potential users consisting of 3 stages: </p>
                             <p> - First, 3 hypothetical scenarios which were presented to users who were asked to describe how they would behave in those situations.</p>
                             <p> - Then, we asked the users to explore 2-3 existing interfaces related to the pandemic and complete certain tasks using a think-aloud method. </p>
                             <p> - Finally, we included a few open-ended questions to get further insight into their opinions</p>
+                            <p> Our findings were then compiled into the following design requirements</p>
                         </Col>
-                        <Col md={6} className="subcomponent">
+                        <Col md={4} className="subcomponent">
                             <img src={reqImg} alt="Logo" />
+                        </Col>
+                        <Col md={12} className={"subcomponent"} style={{marginTop: "-3em"}}>
+                            <h6>Functional Requirements</h6>
+                            <ul>
+                                <li>Show the state of the pandemic in different parts of the us</li>
+                                <li>Show what areas enforce quarantine safety measures such as travel restrictions or mask requirements</li>
+                                <li>Show risk-reduction methods for cases where social distancing isn't possible</li>
+                                <li>Help decide if it is safe to attend events/social gatherings</li>
+                                <li>Explain when a vaccine may be avaliable to different populations</li>
+                                <li>Explain how different vaccines are made and if they'll be safe</li>
+                                <li>Find other official resources about Coivd</li>
+                                <li>Answer general concerns/questions about Covid-19</li>
+                                <li>Share information with peers</li>
+                            </ul>
+                            <h6>Nonfunctional and Usability Requirements</h6>
+                            <ul>
+                                <li>Interface should be accessible at all times</li>
+                                <li>Load times under 2 seconds</li>
+                                <li>Only use publically avaliable data</li>
+                                <li>Make any data visualizations friendly for layment with minimal use of legends</li>
+                                <li>Limit use of panning/zooming when showing a map</li>
+                                <li>Make interactions usable from a labtop with a mouse or trackpad</li>
+                                <li>Use simple, memorable, color-blind friendly colors</li>
+                                <li>Use a shallow navigation tree</li>
+                                <li>Minimize scrolling needed to find information</li>
+                                <li>Layout should be responsive for medium to large screens (e.g. laptops and desktops)</li>
+                            </ul>
                         </Col>
                     </Row>
                 </Container>
 
                 <Container className="container">
-                <h1>Sketches Selection</h1>
+                <h1>Design Sketches</h1>
                     <Row>
                         
-                            <h5>Based on our user requirements, we gathered 4 major tasks:</h5>
+                            <h5>Based on our user requirements, we identified 4 design challenges that we based our project on</h5>
                       
                     </Row>
                     <Row>
                         
                         <Col md={6} className="subcomponent" >
                         <h4>Where?</h4>
+                        <p>
+                            We found that people felt that there may be situations where traveling was necessary, such as for work trips. People were interested in both determining the risk of going to a certain area, as well as figuring out what areas are safest to stop at when traveling.
+                            We distilled this requirement into our first design challenged: 
+                        </p>
                         <h6>Find a safe travel route between areas that considers travel restrictions and find out how safe a certain area is.</h6>
                         <img src={sk11} alt="sketch"  className="sketches"/>
                         <img src={sk12} alt="sketch" className="sketches" />
@@ -86,6 +118,10 @@ class AboutProject extends React.Component {
                         </Col>
                         <Col md={6} className="subcomponent">
                         <h4>What?</h4>
+                        <p>
+                            While people had different amount of risk-aversion, some people expressed a need to break quarantine for activities deemed as necessary, such as attending religious services or seeing
+                            family over the holidays.  However, people had a poor idea of the relative risks of these activities.  In order to mitigate harm, we decided that our interface should focus on conveying risks and showing safe alternatives when acceptable.  We distilled this into our second design challenge:
+                        </p>
                         <h6>See how safe certain activities are such as: eating out, sending children to school, hosting a private party, and the most effective risk reduction strategies.</h6>
                         <img src={sk21} alt="sketch" className="sketches"/>
                         <img src={sk22} alt="sketch" className="sketches" />
@@ -93,6 +129,9 @@ class AboutProject extends React.Component {
                         </Col>
                         <Col md={6} className="subcomponent second_sketches_row" >
                         <h4>When?</h4>
+                        <p>
+                            Many interviewees expressed interest in knowing when vaccines are going to be avaliable, as well as additional information such as the safety of these vaccines and how they work.  We distilled these questions into our third design challenge:
+                        </p>
                         <h6>Learn about the current state of vaccine development as well as when one might be available and how safe it is.</h6>
                         <img src={sk31} alt="sketch"  className="sketches"/>
                         <img src={sk32} alt="sketch" className="sketches" />
@@ -100,6 +139,9 @@ class AboutProject extends React.Component {
                         </Col>
                         <Col md={6} className="subcomponent second_sketches_row" >
                         <h4>How?</h4>
+                        <p>
+                            Outside of specific questions, there were a number of general safety questions.  People also mentioned that they wanted the links to the sources of our data to help ensure trust in our system.  We summarized these into our fourth design goal: 
+                        </p>
                         <h6>Find resources to learn about commonly asked questions.</h6>
                         <img src={sk41} alt="sketch" className="sketches"/>
                         <img src={sk42} alt="sketch" className="sketches" />
@@ -132,21 +174,55 @@ class AboutProject extends React.Component {
                         </Col>
                     </Row>
                 </Container>
-                <Container className="container"  style={{backgroundColor:"#f0f8ff"}}>
-                <h1>Contributors:</h1>
+                <Container className="container" style={{backgroundColor:"#f0f8ff"}}>
+                <h1>Future Work</h1>
                     <Row>
-                        <Col md={12} className="subcomponent profile_icons">
+                        <p> Something</p>
+                    </Row>
+                </Container>
+                <Container className="container" >
+                <h1>Contributions:</h1>
+                    <Row>
+                        <Col md={4} className="subcomponent profile_icons">
                             <div>
-                                <h6>Andrew Wendtzel</h6>
                                 <img src={icon1} width="100" height="100"/>
+                                <h6>Andrew Wentzel</h6>
+                                <ul>
+                                    <li>Participated in intial requirements gathering, design sketches, and formative evaluation</li>
+                                    <li>Map Page</li>
+                                    <li>External Links on FAQ page</li>
+                                    <li>Edits to home page and nav bar</li>
+                                    <li>Edited Final Writeup</li>
+                                    <li>Recorded demo</li>
+                                </ul>
                             </div>
+                        </Col>
+                        <Col md={4} className="subcomponent profile_icons">
                             <div>
-                                <h6>Carla Floricel</h6>
                                 <img src={icon2} width="100" height="100"/>
+                                <h6>Carla Floricel</h6>
+                                <ul>
+                                    <li>Participated in intial requirements gathering, design sketches, and formative evaluation</li>
+                                    <li>Website skeleton</li>
+                                    <li>Initial design of the homepage and nav bar</li>
+                                    <li>Faq questions and search feature</li>
+                                    <li>Made nav-bar responsive for mobile applications</li>
+                                    <li>Initial draft of final writeup</li>
+                                    <li>Recorded final presentation</li>
+                                </ul>
                             </div>
+                        </Col>
+                        <Col md={4} className="subcomponent profile_icons">
                             <div>
-                                <h6>Md Nafiul Nipu</h6>
                                 <img src={icon3} width="100" height="100"/>
+                                <h6>Md Nafiul Nipu</h6>
+                                <ul>
+                                    <li>Participated in intial requirements gathering, design sketches, and formative evaluation</li>
+                                    <li>Vaccines Page</li>
+                                    <li>Formative Evalutation section of writeup</li>
+                                    <li>Edited final writeup</li>
+                                    <li>Script for final presentation</li>
+                                </ul>
                             </div>
                         </Col>
                     </Row>
