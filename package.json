@@ -2,7 +2,7 @@
   "name": "covid-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://carlafloricel.github.io/",
+  "homepage":"https://carlafloricel.github.io/cs522-covid-app/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@testing-library/jest-dom": "^5.11.5",
