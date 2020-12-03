@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/cs522-covid-app/static/css/main.8db496f7.chunk.css",
+    "main.js": "/cs522-covid-app/static/js/main.ee42fa54.chunk.js",
+    "main.js.map": "/cs522-covid-app/static/js/main.ee42fa54.chunk.js.map",
+    "runtime-main.js": "/cs522-covid-app/static/js/runtime-main.8b641256.js",
+    "runtime-main.js.map": "/cs522-covid-app/static/js/runtime-main.8b641256.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/cs522-covid-app/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.9297843f.chunk.js": "/cs522-covid-app/static/js/2.9297843f.chunk.js",
+    "static/js/2.9297843f.chunk.js.map": "/cs522-covid-app/static/js/2.9297843f.chunk.js.map",
+    "index.html": "/cs522-covid-app/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/cs522-covid-app/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.8db496f7.chunk.css.map": "/cs522-covid-app/static/css/main.8db496f7.chunk.css.map",
+    "static/js/2.9297843f.chunk.js.LICENSE.txt": "/cs522-covid-app/static/js/2.9297843f.chunk.js.LICENSE.txt",
+    "static/media/activities.184bec9e.jpg": "/cs522-covid-app/static/media/activities.184bec9e.jpg",
+    "static/media/activities.47427129.JPG": "/cs522-covid-app/static/media/activities.47427129.JPG",
+    "static/media/faq.95374fe6.jpg": "/cs522-covid-app/static/media/faq.95374fe6.jpg",
+    "static/media/map.f6e2ac29.jpg": "/cs522-covid-app/static/media/map.f6e2ac29.jpg",
+    "static/media/vaccines.2559c15c.png": "/cs522-covid-app/static/media/vaccines.2559c15c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b641256.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.9297843f.chunk.js",
+    "static/css/main.8db496f7.chunk.css",
+    "static/js/main.ee42fa54.chunk.js"
+  ]
+}
