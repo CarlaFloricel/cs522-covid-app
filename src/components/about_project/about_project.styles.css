@@ -40,3 +40,12 @@ h5 {
     flex-direction: row;
     justify-content: space-evenly;
 }
+.prtotypeDesign{
+    text-align: center;
+}
+.formative-image{
+    float: left;
+}
+.formative-para{
+    margin-top: 1%;
+}
