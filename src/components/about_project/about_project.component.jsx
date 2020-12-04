@@ -59,10 +59,10 @@ class AboutProject extends React.Component {
                     <Row>
                         <Col md={8} className="subcomponent">
                             <p>In order to make our project useful, we needed to understand what people think and know about this pandemic.We conducted 6 interviews with different potential users consisting of 3 stages: </p>
-                            <p> - First, 3 hypothetical scenarios which were presented to users who were asked to describe how they would behave in those situations.</p>
-                            <p> - Then, we asked the users to explore 2-3 existing interfaces related to the pandemic and complete certain tasks using a think-aloud method. </p>
-                            <p> - Finally, we included a few open-ended questions to get further insight into their opinions</p>
-                            <p> Our findings were then compiled into the following design requirements</p>
+                            <li> First, 3 hypothetical scenarios which were presented to users who were asked to describe how they would behave in those situations.</li>
+                            <li>Then, we asked the users to explore 2-3 existing interfaces related to the pandemic and complete certain tasks using a think-aloud method.</li>
+                            <li>Finally, we included a few open-ended questions to get further insight into their opinions</li>
+                            <li> Our findings were then compiled into the following design requirements</li>
                         </Col>
                         <Col md={4} className="subcomponent">
                             <img src={reqImg} alt="Logo" />
@@ -138,7 +138,7 @@ class AboutProject extends React.Component {
                         <img src={sk32} alt="sketch" className="sketches" />
                         <img src={sk33} alt="sketch" className="sketches"/>
                         </Col>
-                        <Col md={6} className="subcomponent second_sketches_row" >
+                        <Col md={6} sm={12} className="subcomponent second_sketches_row" >
                         <h4>How?</h4>
                         <p>
                             Outside of specific questions, there were a number of general safety questions.  People also mentioned that they wanted the links to the sources of our data to help ensure trust in our system.  We summarized these into our fourth design goal: 
@@ -398,7 +398,7 @@ class AboutProject extends React.Component {
                                             <h6>Design challenge 4</h6>
                                             <p>
                                                 A search bar at top of the page will be added to allow user for easy navigation and search for their desired questions without scrolling through the page. 
-                                                Addionallt, we will include  reference links with each question, and additional external links to other resources.
+                                                Addionally, we will include  reference links with each question, and additional external links to other resources.
                                             </p>
                                         </Col>
                                     </Row>
@@ -420,23 +420,17 @@ class AboutProject extends React.Component {
                 <Container className="container" style={{backgroundColor:"#f0f8ff"}}>
                     <Row>
                         <Col md={12} className={"subcomponent"}>
-                            <h1>Conclusion</h1>
+                            <h1>Conclusion and Future Work</h1>
                             <p> In conclusion, we designed and implemented an interface that we believe will help to persuade people to make safer decision during the pandemic. 
                                 Our safe travel component will help the users to find a safe stop on a road trip.
                                 Our activities component will assist them to complete different activities at a low risk.  
                                 Our vaccines component will allow them to get insight about the vaccine development process. 
                                 Finally, the FAQ component will guide them towards additional knowledge and official resources and data. 
                             </p>
-                        </Col>
-                    </Row>
-                </Container>
-                <Container className="container" style={{backgroundColor:"#f0f8ff"}}>
-                <h1>Future Work</h1>
-                    <Row>
-                        <Col md={12} className={"subcomponent"}>
                             <p>
-                            Our future plan is to conduct a study to validate our interface and check whether it is able to create safety measures for the users. 
-                            Additionally, we want to add more features such as -
+                            Our future plan is to conduct a study to validate our interface and check whether or not it is able to create safety measures for the users.
+                            
+                            Additionally, we want to add more features such as:
                             <ul>
                                 <li>County wise covid distribution.</li>
                                 <li>Automatically suggest users the best route to choose for their trip.</li>
@@ -460,6 +454,7 @@ class AboutProject extends React.Component {
                                     <li>External Links on FAQ page</li>
                                     <li>Edits to home page and nav bar</li>
                                     <li>Edited Final Writeup</li>
+                                    <li>Initial draft of final presentation</li>
                                     <li>Recorded demo</li>
                                 </ul>
                             </div>
@@ -486,7 +481,7 @@ class AboutProject extends React.Component {
                                 <ul>
                                     <li>Participated in intial requirements gathering, design sketches, and formative evaluation</li>
                                     <li>Vaccines Page</li>
-                                    <li>Formative Evalutation section of writeup</li>
+                                    <li>Formative Evalutation, Conclusion and Future Work sections of writeup</li>
                                     <li>Edited final writeup</li>
                                     <li>Script for final presentation</li>
                                 </ul>
