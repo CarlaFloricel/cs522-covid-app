@@ -21,9 +21,14 @@ h5 {
 }
 
 .sketches{
-    transform: scale(0.8);
-    margin:-20px;
+    margin:1em;
+    padding: 0em;
     margin-left: -50px;
+    min-width: 70%;
+    max-width: 95%;
+    min-height: 35vh;
+    max-height: 50vh;
+    float: center;
 }
 
 .second_sketches_row{
@@ -40,11 +45,14 @@ h5 {
     flex-direction: row;
     justify-content: space-evenly;
 }
-.prtotypeDesign{
+.prototypeDesign{
     text-align: center;
+    margin:0;
 }
 .formative-image{
     float: left;
+    height: 35vh;
+    width: 30vw;
 }
 .formative-para{
     margin-top: 1%;
