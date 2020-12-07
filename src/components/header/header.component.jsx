@@ -5,11 +5,11 @@ import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 
 const navLinks = [
+    {btnText: 'Home', btnId: 'home'},
     {btnText: 'Safe Travel', btnId: 'map'},
     {btnText: 'Vaccines', btnId: 'vaccines'},
     {btnText: 'Activities', btnId: 'activities'},
-    {btnText: 'FAQ', btnId: 'faq'},
-    {btnText: 'About Project', btnId: 'about'}
+    {btnText: 'FAQ', btnId: 'faq'}    
 ]
 
 const Header = (props) => {
@@ -47,7 +47,7 @@ const Header = (props) => {
             <Nav.Link >
             <Link to="/cs522-covid-app" className="option">
             <Button disabled={atHome} variant={homeVariant} className="btn btn-info btn-lg">
-                 Home
+                About Project
             </Button>
             </Link>
             </Nav.Link>

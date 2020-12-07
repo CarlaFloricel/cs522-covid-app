@@ -19,12 +19,12 @@ function App() {
     <div className="App">
       <Route component={Header}></Route>
       <Switch>
-        <Route exact path='/cs522-covid-app' component={HomePage}></Route>
+        <Route exact path='/cs522-covid-app/home' component={HomePage}></Route>
         <Route exact path='/cs522-covid-app/map' component={Map}></Route>
         <Route exact path='/cs522-covid-app/vaccines' component={Vaccines}></Route>
         <Route exact path='/cs522-covid-app/activities' component={Activities}></Route>
         <Route exact path='/cs522-covid-app/faq' component={Faq}></Route>
-        <Route exact path='/cs522-covid-app/about' component={AboutProject}></Route>
+        <Route exact path='/cs522-covid-app/' component={AboutProject}></Route>
       </Switch>
 
     </div>
