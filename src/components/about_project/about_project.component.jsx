@@ -162,7 +162,7 @@ class AboutProject extends React.Component {
                         </Col>
                         <Col md={12} className="subcomponent">
                             <Row>
-                                <Col md={7} >
+                                <Col md={6} >
                                     <p className={"formative-para"}>
                                     The basic design was made of 4 parts, which were broken up into “Exploring”,
                                      for open data visualization tasks, and “Learning”, for more question oriented tasks.
@@ -170,12 +170,12 @@ class AboutProject extends React.Component {
                                     largely for simplicity in creating the prototype flow.
                                     </p>
                                 </Col>
-                                <Col md={5}>
+                                <Col md={6}>
                                     <img src={sk50} alt="sketch" className="sketches_prototype formative-image"/>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col md={7}>
+                                <Col md={6}>
                                     <p className={"formative-para"}>
                                     The “Safe Travel” page includes an example flow of a map with clickable 
                                     interaction for inputting a start/stop destination, adding a mask filter, 
@@ -188,7 +188,7 @@ class AboutProject extends React.Component {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col md={7}>
+                                <Col md={6}>
                                     <p className={"formative-para"}>
                                     The “Race for a vaccine” or “Vaccine” tab has a timeline showing the size and start date 
                                     of all final stage (stage 3 or 2-3 combined) clinical trials, 
@@ -197,32 +197,32 @@ class AboutProject extends React.Component {
                                      rather than all possible vaccines, for simplicity.
                                     </p>
                                 </Col>
-                                <Col md={5}>
+                                <Col md={6}>
                                     <img src={sk52} alt="sketch" className="sketches_prototype formative-image"/>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col md={7}>
+                                <Col md={6}>
                                     <p className={"formative-para"}>
                                     The “Staying Safe” tab has a heatmap of activities and risks associated with each one,
                                      based on social distancing.  Two buttons toggles the map between “daily” and “social”
                                       activities.
                                     </p>
                                 </Col>
-                                <Col md={5}>
+                                <Col md={6}>
                                     <img src={sk53} alt="sketch" className="sketches_prototype formative-image"/>
                                 </Col>
                               
                             </Row>
                             <Row>
-                                <Col md={7}>
+                                <Col md={6}>
                                     <p className={"formative-para"}>
                                     The FAQ tab has a list of questions and (fake) links to additional resources.
                                      Clicking on the box around the question will bring up the answer, 
                                      in line with the “drawer” design pattern.
                                     </p>
                                 </Col>
-                               <Col md={5}>
+                               <Col md={6}>
                                 <img src={sk54} alt="sketch" className="sketches_prototype formative-image"/>
                                </Col>
                             </Row>
@@ -492,6 +492,7 @@ class AboutProject extends React.Component {
                                     <li>Formative Evalutation, Conclusion and Future Work sections of writeup</li>
                                     <li>Edited final writeup</li>
                                     <li>Script for final presentation</li>
+                                    <li>Deployed app on Github</li>
                                 </ul>
                             </div>
                         </Col>
