@@ -13,7 +13,7 @@ const navLinks = [
 ]
 
 const Header = (props) => {
-    var currPage = (props.location === undefined)? '/cs522-covid-app' : props.location.pathname;
+    var currPage = (props.location === undefined)? '/cs522-covid-app/' : props.location.pathname;
 
     var isButtonActive = (navItem) => {
         var isActive = (currPage == '/cs522-covid-app/' + navItem.btnId);
@@ -36,7 +36,7 @@ const Header = (props) => {
     }
     const navOptions = navLinks.map(getNavButton)
 
-    const atHome = (currPage === '/cs522-covid-app');
+    const atHome = (currPage === '/cs522-covid-app')||(currPage === '/cs522-covid-app/');
     const homeVariant = atHome? 'outline-info': 'info';
 
     return (       
@@ -45,7 +45,7 @@ const Header = (props) => {
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
             <Nav.Link >
-            <Link to="/cs522-covid-app" className="option">
+            <Link to="/cs522-covid-app/" className="option">
             <Button disabled={atHome} variant={homeVariant} className="btn btn-info btn-lg">
                 About Project
             </Button>
