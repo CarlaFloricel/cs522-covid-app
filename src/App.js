@@ -24,7 +24,7 @@ function App() {
         <Route exact path='/cs522-covid-app/vaccines' component={Vaccines}></Route>
         <Route exact path='/cs522-covid-app/activities' component={Activities}></Route>
         <Route exact path='/cs522-covid-app/faq' component={Faq}></Route>
-        <Route exact path='/cs522-covid-app/' component={AboutProject}></Route>
+        <Route exact path='/cs522-covid-app' component={AboutProject}></Route>
       </Switch>
 
     </div>
